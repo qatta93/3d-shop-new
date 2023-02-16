@@ -7,7 +7,7 @@ import FurnitureTypes from '@/components/furnitureTypes';
 const Home: NextPage = () => {
 
   return (
-    <section className='h-full overflow-scroll'>
+    <section className='h-full overflow-y-scroll overflow-x-hidden'>
       <section className='flex flex-col sm:flex-row px-[20px] sm:px-[40px] items-center text-center sm:text-left pt-[60px]'>
         <div>
           <h1 className='font-changa-one max-w-[300px] text-[31px] leading-[38px] sm:text-[42px]'>Furniture for a better everyday life.</h1>
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           <Image src="/images/chair-main.png" alt="chair"  layout='fill' className="absolute"/>
         </div>
       </section>
-      <section className='w-full mb-16 mt-14 bg-primary-bcg bg-no-repeat bg-cover'>
+      <section className='w-full pb-16 mt-14 bg-primary-bcg bg-no-repeat bg-cover'>
         <div className='grid grid-cols-1 gap-40 px-[20px] sm:px-[40px]'>
           <h2 className='text-center text-[32px] -mb-6'>PRODUCTS</h2>
           <FurnitureTypes/>
