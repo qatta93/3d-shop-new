@@ -1,33 +1,38 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import { DesktopNavProps } from '../types';
-import CheckActiveLink from '../helpers/checkActiveLink';
+import NavLink from './NavLink';
 
 
 export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
+  const [activeCart, setActiveCart] = useState(false)
+
+  const handleGetClassName = e => {
+    console.log(e.currentTarget.className)
+    setActiveCart(e.currentTarget.className === 'linkNav-active' ? true : false);
+  };
 
   return (
-    // add gaps to columns
     <div className='flex'>
-      <Link href='/'><a className={CheckActiveLink('/')}>home</a></Link>
-      <Link href='/products'><a className={CheckActiveLink('/products')}>products</a></Link>
+      <NavLink href={'/'}><a>home</a></NavLink>
+      <NavLink href={'/products'}><a>products</a></NavLink>
       {session ?
-      // check the endpoint!!
-        <button className={CheckActiveLink('/auth/signin')} onClick={() => signOut()}>logout</button>
+        <NavLink href={'/auth/signin'}><a onClick={() => signOut()}>logout</a></NavLink>
         :
-        <button className={CheckActiveLink('/auth/signin')} onClick={() => signIn()}>login</button>
+        <NavLink href={'/auth/signin'}><a onClick={() => signIn()}>login</a></NavLink>
       }
-      <Link href='/cart'>
-        <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px] '>
-          {/* change the cart icon when the page is active */}
-          {CheckActiveLink('/cart') === 'activeCart' ?
-          <Image src="/images/cart-filled.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
-          :
-          <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
-          }
-        </div>
-      </Link>
+      <NavLink href={'/cart'} onClick={(e) => handleGetClassName(e)}>
+        <a>
+          <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px]'  >
+            {activeCart ?
+              <Image src="/images/cart-filled.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
+              :
+              <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
+            }
+          </div>
+        </a>
+      </NavLink>
     </div>
   )
 }

@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline solid 2px theme('colors.secondary-medium');
+}
+
 * {
   box-sizing: border-box;
 }

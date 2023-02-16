@@ -1,13 +1,23 @@
-.link-active {
+.linkNav {
+  margin: auto 16px;
+}
+
+.linkNav:hover {
   font-weight: 600;
-  text-decoration: underline solid 2px theme('colors.secondary-medium');
+}
+
+.linkNav-active {
+  font-weight: 600;
   font-size: 16px;
   margin: 2px 16px 0;
 }
 
 @screen lg {
-  .link-active {
+  .linkNav-active {
     margin: 4px 27px 0;
+  }
+  .linkNav {
+    margin: auto 27px;
   }
 }
 
