@@ -26,7 +26,6 @@ const styles = {
     if (type === 'md') return 'btn-md';
     if (type === 'sm') return 'btn-sm';
     if (type === 'xs') return 'btn-xs';
-    return 'md';
   },
 };
 

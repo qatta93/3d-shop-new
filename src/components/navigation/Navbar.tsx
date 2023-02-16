@@ -11,7 +11,7 @@ export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
   const { data: session } = useSession();
 
   return (
-    <nav className='fixed z-10 h-[50px] sm:h-[70px] w-full flex justify-between bg-primary-light px-[20px] py-[12px] sm:py-[20px] sm:px-6 lg:px-[112px]'>
+    <nav className='fixed z-10 h-[50px] sm:h-[70px] w-full flex justify-between bg-primary-light px-[20px] py-[12px] sm:py-[20px] sm:px-[40px] lg:px-[112px]'>
       <section className='flex'>
         <div className='relative h-[30px] w-[30px] lg:h-[37px] lg:w-[37px]'>
           <Image src="/images/logo.png" alt="logo"  layout='fill' className="absolute"/>
