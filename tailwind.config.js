@@ -48,6 +48,9 @@ module.exports = {
     
         'xl': '1280px',
         // => @media (min-width: 1280px) { ... }
+      },
+      scale: {
+        '102': '1.02',
       }
     },
   },

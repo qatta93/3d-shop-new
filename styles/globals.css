@@ -20,6 +20,7 @@ a {
 }
 
 a:hover {
+  cursor: pointer;
   text-decoration: underline solid 2px theme('colors.secondary-medium');
 }
 
