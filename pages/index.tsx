@@ -29,8 +29,8 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section className='w-full pb-16 mt-14 bg-primary-bcg bg-no-repeat bg-cover'>
-        <div className='grid grid-cols-1 gap-40 px-[20px] sm:px-[40px]'>
-          <h2 className='text-center text-[32px] -mb-6'>PRODUCTS</h2>
+        <div className='grid grid-cols-1 gap-40 px-[40px]'>
+          <h2 className='text-center text-[26px] sm:text-[32px] -mb-6'>PRODUCTS</h2>
           <FurnitureTypes/>
         </div>
       </section>
