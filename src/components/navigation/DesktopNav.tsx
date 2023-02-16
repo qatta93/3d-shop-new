@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image';
 import { DesktopNavProps } from '../types';
-import CheckActiveLink from '../helpers/CheckActiveLink';
+import CheckActiveLink from '../helpers/checkActiveLink';
 
 
 export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {

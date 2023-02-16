@@ -10,7 +10,7 @@ const Home: NextPage = () => {
     <section className='h-full px-[20px] sm:px-[40px] overflow-scroll'>
       <section className='flex flex-col sm:flex-row items-center text-center sm:text-left pt-[60px]'>
         <div>
-          <h1 className='font-changa-one max-w-[300px] text-[55px] sm:text-[42px]'>Furniture for a better everyday life.</h1>
+          <h1 className='font-changa-one max-w-[300px] text-[31px] sm:text-[42px]'>Furniture for a better everyday life.</h1>
           <p className='pt-[31px] pb-[45px] max-w-[300px] text-base font-light'>Have a look on our 3D models and find your perfect match!</p>
           <Link href={'/products'}>
             <Button
