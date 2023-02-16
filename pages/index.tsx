@@ -28,7 +28,7 @@ const Home: NextPage = () => {
           <Image src="/images/chair-main.png" alt="chair"  layout='fill' className="absolute"/>
         </div>
       </section>
-      <section className='w-full pb-24 mt-14 sm:mt-20 bg-primary-bcg bg-no-repeat bg-cover'>
+      <section className='w-full pb-24 mt-14 sm:mt-20 lg:mt-0 bg-primary-bcg bg-no-repeat bg-cover'>
         <h2 className='text-center text-[26px] sm:text-[32px] -mb-6 xl:hidden'>PRODUCTS</h2>
         <div className='flex flex-wrap px-[20px] sm:px-[40px] lg:px-[112px]'>
           <h2 className='rotate-180 pb-[130px] pl-4 text-center text-[32px] -mb-6 hidden xl:block' style={{ writingMode: 'vertical-rl' }}>PRODUCTS</h2>
