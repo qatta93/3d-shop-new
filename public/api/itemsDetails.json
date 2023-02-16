@@ -1,0 +1,61 @@
+[{
+  "id": "chair1",
+  "type": "chairs",
+  "name": "Comfy Chair",
+  "price": "95$",
+  "color": "black",
+  "description": "lorem ipsum lorem ipsum",
+  "embed": "https://sketchfab.com/models/763c5061112d4432addd898b5f4a17ae/embed",
+  "img": "/images/chair1.png"
+},
+{
+  "id": "chair2",
+  "type": "chairs",
+  "name": "Victorian Style Chair",
+  "price": "350$",
+  "color": "oak",
+  "description": "lorem ipsum lorem ipsum",
+  "embed": "https://sketchfab.com/models/5a080539c53b40c8b257b57c5677e2f0/embed",
+  "img": "/images/chair2.png"
+},
+{
+  "id": "table1",
+  "type": "tables",
+  "name": "Egyptian Table",
+  "price": "185$",
+  "color": "oak",
+  "description": "lorem ipsum lorem ipsum",
+  "embed": "https://sketchfab.com/models/e0c4de506dac4c05897eba02932b0c27/embed",
+  "img": "/images/table1.png"
+},
+{
+  "id": "table2",
+  "type": "tables",
+  "name": "Antique Table",
+  "price": "300$",
+  "color": "oak",
+  "description": "lorem ipsum lorem ipsum",
+  "embed": "https://sketchfab.com/models/f01054c29829452a9f87437de57a3f6f/embed",
+  "img": "/images/table2.png"
+},
+{
+  "id": "lamp1",
+  "type": "lamps",
+  "name": "Night Lamp",
+  "price": "65$",
+  "color": "steel",
+  "description": "lorem ipsum lorem ipsum",
+  "embed": "https://sketchfab.com/models/59caa390eda24394bd58156da32e4ef4/embed",
+  "img": "/images/lamp1.png"
+},
+{
+  "id": "lamp2",
+  "type": "lamps",
+  "name": "Simple Lamp",
+  "price": "100$",
+  "color": "steel",
+  "description": "lorem ipsum lorem ipsum",
+  "embed": "https://sketchfab.com/models/813f5aeef3f3430d947f3879c6941719/embed",
+  "img": "/images/lamp2.png"
+}
+]
