@@ -1,16 +1,16 @@
 # 3D FURNITURE SHOP
-> The app is hosted in Vercel [_HERE._](https://3d-shop.vercel.app/)
+<!-- > The app is hosted in Vercel [_HERE._](https://3d-shop.vercel.app/) -->
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
+<!-- * [Features](#features)
 * [Screenshots](#screenshots)
 * [Folders Structure](#folders-structure)
 * [Client Side Components Structure](#client-side-components-structure)
 * [Setup](#setup)
 * [Project Status](#project-status)
-* [Future features](#future-features)
+* [Future features](#future-features) -->
 
 
 ## General Information
@@ -37,7 +37,7 @@ This full stack app was created in order to make online shopping more user frien
 - GitHub actions for CI/CD pipeline
 - Heroku Postgres Add-ons
 
-## Features
+<!-- ## Features
 So far, I have incorporated the following features:
 
 - user can display 3D models from different perspectives
@@ -82,4 +82,4 @@ The project is currently on progress, and some additional features will be inclu
 
 ## Future features
 - payments
-- 3D custom configurator based on parameters
+- 3D custom configurator based on parameters -->
