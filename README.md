@@ -1,5 +1,5 @@
 # 3D FURNITURE SHOP
-<!-- > The app is hosted in Vercel [_HERE._](https://3d-shop.vercel.app/) -->
+> The app is hosted in Vercel [_HERE._](https://3d-shop-new.vercel.app/)
 
 ## Table of Contents
 * [General Info](#general-information)
@@ -8,9 +8,9 @@
 * [Screenshots](#screenshots)
 * [Folders Structure](#folders-structure)
 * [Client Side Components Structure](#client-side-components-structure)
-* [Setup](#setup)
+* [Setup](#setup) -->
 * [Project Status](#project-status)
-* [Future features](#future-features) -->
+<!-- * [Future features](#future-features) -->
 
 
 ## General Information
@@ -75,11 +75,11 @@ In order to run a local copy, users need to include an .env file in the server f
 - GITHUB_CLIENT_ID - Google credentials to enable authentication 
 - GITHUB_CLIENT_SECRET - Google credentials to enable authentication
 - NEXTAUTH_URL - website url
-- SECRET - secret created randomly. You can use https://generate-secret.vercel.app/32 to generate it.
+- SECRET - secret created randomly. You can use https://generate-secret.vercel.app/32 to generate it. -->
 
 ## Project Status
-The project is currently on progress, and some additional features will be included in the future.
+The project is currently on progress and additional features will be included in the future.
 
-## Future features
+<!-- ## Future features
 - payments
 - 3D custom configurator based on parameters -->
