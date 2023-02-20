@@ -10,7 +10,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false,
     "jsx": "preserve",
     "incremental": true,
     "noEmit": true,
@@ -20,5 +20,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/auth/signin.js", "context/AppContext.js"],
-  "exclude": ["node_modules", "pages/api/products.ts"]
+  "exclude": ["node_modules", "pages/api/products.ts"],
 }
