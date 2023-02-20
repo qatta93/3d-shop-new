@@ -11,6 +11,7 @@
     "component:headless": "cypress run --component",
     "vercel-build": "next build",
     "start": "next start",
+    "test": "jest --watch",
     "lint": "next lint",
     "migrate:postgres": "dotenv -e .env.local -- npx prisma migrate dev --name postgres-init"
   },
@@ -41,11 +42,15 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/three": "^0.141.0",
     "autoprefixer": "^10.4.7",
     "cypress": "^12.6.0",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
     "postcss": "^8.4.14",
     "prisma": "^4.9.0",
     "tailwindcss": "^3.0.24",

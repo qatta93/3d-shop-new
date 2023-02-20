@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Products = () => {
   return (
-    <h1>Products</h1>
+    <h1>What does your Home need?</h1>
   )
 }
 

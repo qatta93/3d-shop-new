@@ -4,5 +4,10 @@
     // Other rules
     "@next/next/no-img-element": "off",
     "react/display-name": "off"
-  }
+  },
+  "globals": {
+    "shallow": true,
+    "render": true,
+    "mount": true
+}
 }

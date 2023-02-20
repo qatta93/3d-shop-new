@@ -18,6 +18,7 @@ const Home: NextPage = () => {
             <Button
               variant={'primary'}
               className={'uppercase btn-sm sm:btn-md lg:btn-lg'}
+              name={'see 3d models'}
               >
               see 3d models
             </Button>
