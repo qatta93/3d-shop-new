@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image';
 import FurnitureData from '@/components/furnitureData';
 import furnitureTypes from "public/api/productsTypes.json"
-// import { FurnitureTypesProps } from '../types'
 import FurnitureTypesCard from '../src/components/furnitureData/furnitureTypesCard'
 
 const Home: NextPage = () => {

@@ -6,6 +6,9 @@
     "dev": "next dev",
     "build:css": "tailwind build ./styles/globals.css -o ./.next/static/css/f562df6760a9ea46.css --watch",
     "build": "next build",
+    "cypress": "cypress open",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component",
     "vercel-build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -40,6 +43,7 @@
   "devDependencies": {
     "@types/three": "^0.141.0",
     "autoprefixer": "^10.4.7",
+    "cypress": "^12.6.0",
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
     "postcss": "^8.4.14",
