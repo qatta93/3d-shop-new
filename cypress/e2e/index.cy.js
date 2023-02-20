@@ -1,5 +1,5 @@
 
-import Home from './index'
+import Home from '../../pages/index'
 
 describe('<Home />', () => {
   it('should render and display expected content', () => {
