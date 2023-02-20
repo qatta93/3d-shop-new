@@ -2,7 +2,10 @@ import Button from '@/components/button'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image';
-import FurnitureTypes from '@/components/furnitureTypes';
+import FurnitureData from '@/components/furnitureData';
+import furnitureTypes from "public/api/productsTypes.json"
+// import { FurnitureTypesProps } from '../types'
+import FurnitureTypesCard from '../src/components/furnitureData/furnitureTypesCard'
 
 const Home: NextPage = () => {
 
@@ -32,7 +35,7 @@ const Home: NextPage = () => {
         <h2 className='text-center text-[26px] sm:text-[32px] -mb-6 xl:hidden'>PRODUCTS</h2>
         <div className='flex flex-wrap px-[20px] sm:px-[40px] lg:px-[112px]'>
           <h2 className='rotate-180 pb-[130px] pl-4 text-center text-[32px] -mb-6 hidden xl:block' style={{ writingMode: 'vertical-rl' }}>PRODUCTS</h2>
-          <FurnitureTypes/>
+          <FurnitureData data={furnitureTypes} Component={FurnitureTypesCard}/>
         </div>
       </section>
     </section>

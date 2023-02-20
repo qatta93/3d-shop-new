@@ -1,10 +1,16 @@
 import { RedirectableProviderType } from "next-auth/providers";
+import { FC } from "react";
 
 export interface FurnitureTypesProps {
   id: number,
   name: string,
   img: string,
   price: string,
+}
+
+export interface FurnitureDataProps {
+  data: Array<any>,
+  Component: FC<any>,
 }
 
 export interface FurnitureDetailsProps {
