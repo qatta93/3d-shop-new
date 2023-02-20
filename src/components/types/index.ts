@@ -71,3 +71,7 @@ export interface DesktopNavProps {
   signIn: any,
   signOut: any,
 }
+
+export interface ProductsContextType {
+  state: ProductInState[],
+}

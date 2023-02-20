@@ -30,8 +30,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/auth/signin.js",
-    "context/AppContext.js"
-, "cypress/e2e/index.cy.js"  ],
+    "context/AppContext.tsx"
+  ],
   "exclude": [
     "node_modules",
     "pages/api/products.ts"

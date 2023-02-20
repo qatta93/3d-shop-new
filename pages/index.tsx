@@ -1,3 +1,4 @@
+import { useContext } from 'react';
 import Button from '@/components/button'
 import type { NextPage } from 'next'
 import Link from 'next/link'
@@ -5,8 +6,12 @@ import Image from 'next/image';
 import FurnitureData from '@/components/furnitureData';
 import furnitureTypes from "public/api/productsTypes.json"
 import FurnitureTypesCard from '../src/components/furnitureData/furnitureTypesCard'
+import { Context } from "../context/AppContext"
 
 const Home: NextPage = () => {
+   //@ts-ignore
+  const { state } = useContext(Context);
+  console.log(state)
 
   return (
     <section className='h-full overflow-y-scroll overflow-x-hidden pt-[80px] lg:pt-[40px]'>
