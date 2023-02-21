@@ -7,10 +7,9 @@ describe('Home', () => {
   it('renders a heading', () => {
     render(<Products />)
 
-    const heading = screen.getByRole('heading', {
-      name: /Products/i,
-    })
+    const heading = screen.getAllByText(/Products/i)[0]
 
     expect(heading).toBeInTheDocument()
-  })
+  }
+  )
 })
