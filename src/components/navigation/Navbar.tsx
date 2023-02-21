@@ -16,11 +16,11 @@ export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
       <section className='flex'>
         <div className='relative h-[30px] w-[30px] lg:h-[37px] lg:w-[37px]'>
           <Link href='/'>
-            <Image src="/images/logo.png" alt="logo"  layout='fill' className="absolute"/>
+            <Image src="/images/logo.png" alt="logo"  layout='fill' className="absolute cursor-pointer"/>
           </Link>
         </div>
         <Link href='/'>
-          <p className='font-michroma pl-2.5 leading-7 text-[20px] lg:text-[26px]'>SHOPILY</p>
+          <p className='font-michroma pl-2.5 leading-7 text-[20px] lg:text-[26px] cursor-pointer'>SHOPILY</p>
           </Link>
       </section>
       <section>
