@@ -1,4 +1,4 @@
-import getInitialState from "@/components/helpers/getInitialState";
+import getInitialState from "@/components/hooks/useGetInitialState";
 import { ProductsContextType } from "@/components/types";
 import { useReducer, createContext } from "react";
 import productsReducer from './AppReducer'

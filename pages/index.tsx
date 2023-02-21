@@ -10,8 +10,8 @@ import { Context } from "../context/AppContext"
 
 const Home: NextPage = () => {
    //@ts-ignore
-  const { state } = useContext(Context);
-  console.log(state)
+  // const { state } = useContext(Context);
+  // console.log(state)
 
   return (
     <section className='h-full overflow-y-scroll overflow-x-hidden pt-[80px] lg:pt-[40px]'>
