@@ -36,6 +36,7 @@ module.exports = {
       backgroundImage: {
         'primary-bcg': "url('/images/bcg-primary.png')",
         'white-bcg': "url('/images/bcg-white.png')",
+        'furniture-bcg': "url('/images/bcg-furniture.png')",
       },
       screens: {
         'sm': '600px',

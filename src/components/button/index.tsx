@@ -6,6 +6,7 @@ export interface ButtonProps
   variant?: 'primary';
   size?: 'xs' | 'sm' | 'md' | 'lg';
   className?: string;
+  startIcon?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -35,6 +36,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       size,
       className,
+      startIcon,
       onClick,
       children,
       ...rest
@@ -53,6 +55,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
       >
         <>
+        {startIcon && (
+            <span
+              className='mr-4'
+            >
+              {startIcon}
+            </span>
+          )}
           {children}
         </>
       </button>

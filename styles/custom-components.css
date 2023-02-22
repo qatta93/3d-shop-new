@@ -34,5 +34,5 @@
 }
 
 .btn-xs {
-  @apply h-[50px] w-[350px] text-[18px] font-semibold;
+  @apply h-[50px] w-[270px] text-[18px] font-semibold;
 }
