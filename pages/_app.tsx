@@ -23,7 +23,7 @@ function MyApp({  Component, pageProps: { session, ...pageProps }}: AppProps) {
   return (
     <>
       <Head>
-        <title>3D SHOP</title>
+        <title>Shopily</title>
         <meta name="description" content="Find your perfect furniture" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
