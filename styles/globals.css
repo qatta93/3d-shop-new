@@ -33,7 +33,7 @@ a:hover {
   display: none;
 }
 
-*:focus {
+*:focus-visible {
   outline: 3px solid theme('colors.secondary-medium');
 }
 
