@@ -3,7 +3,7 @@ import cx from 'clsx';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary';
+  variant?: 'primary' | 'secondary';
   size?: 'xs' | 'sm' | 'md' | 'lg';
   className?: string;
   startIcon?: React.ReactNode;
@@ -17,9 +17,9 @@ const styles = {
     if (variant === 'primary') {
       return 'text-grey-dark bg-secondary-medium hover:bg-secondary-dark';
     }
-    // if (variant === 'secondary') {
-    //   return 'text-grey-700 inner-border-2 inner-border-grey-700';
-    // }
+    if (variant === 'secondary') {
+      return 'text-grey-dark border-[1px] border-grey-light bg-white hover:bg-primary-light font-light leading-5';
+    }
     return 'primary';
   },
   size: (type: ButtonProps['size']) => {

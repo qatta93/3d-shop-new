@@ -13,7 +13,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <section className='flex flex-col sm:flex-row px-[20px] sm:px-[40px] lg:px-[112px] items-center text-center sm:text-left pt-[60px]'>
+      <section className='flex flex-col sm:flex-row px-[20px] sm:px-[40px] lg:px-[112px] items-center text-center sm:text-left'>
         <div>
           <h1 className='md:text-left'>Furniture for a better everyday life.</h1>
           <p className='pt-[31px] pb-[45px] max-w-[300px] lg:max-w-[400px] lg:leading-[32px] text-base sm:text-[20px] lg:text-[24px] font-light'>Have a look on our 3D models and find your perfect match!</p>

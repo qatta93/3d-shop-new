@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const FurnitureTypesCard = ({furniture}) => {
+const FurnitureTypesCard = ({furniture}) => {
 
   return (
     <Link href={`/products/${furniture.name}`}>
