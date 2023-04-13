@@ -6,6 +6,8 @@ import { Form } from './form';
 const LoginModal = () => {
   return (
     <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] p-[45px]'>
+      <h1>Login</h1>
+      <p className='pb-10'>We are happy to have you with us!</p>
       <Button
         variant={'secondary'}
         className={'btn-xs w-[350px]'}
