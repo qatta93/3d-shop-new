@@ -6,6 +6,7 @@ export interface ButtonProps
   variant?: 'primary' | 'secondary';
   size?: 'xs' | 'sm' | 'md' | 'lg';
   className?: string;
+  type?: 'button' | 'submit';
   startIcon?: React.ReactNode;
   children: React.ReactNode;
 }
@@ -39,13 +40,14 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       startIcon,
       onClick,
       children,
+      type,
       ...rest
     } = props;
     return (
       <button
         ref={ref}
         {...rest}
-        type='button'
+        type={props.type ? props.type : 'button'}
         onClick={props.onClick}
         className={cx(
           'rounded-lg',

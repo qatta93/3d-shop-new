@@ -5,7 +5,7 @@ import { Form } from './form';
 
 const LoginModal = () => {
   return (
-    <section className='max-w-[400px] p-[45px]'>
+    <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] p-[45px] bg-red-50'>
       <Button
         variant={'secondary'}
         className={'btn-xs w-[350px]'}
