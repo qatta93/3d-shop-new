@@ -5,7 +5,7 @@ import { Form } from './form';
 
 const LoginModal = () => {
   return (
-    <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] p-[45px] bg-red-50'>
+    <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] p-[45px]'>
       <Button
         variant={'secondary'}
         className={'btn-xs w-[350px]'}
@@ -24,7 +24,14 @@ const LoginModal = () => {
         >
         Continue with Github
       </Button>
+      <div className='w-full'>
+        <p className="w-full border-b-[1px] border-primary leading-[2px] text-center my-6"><span className="bg-white px-2 text-primary">or</span></p>
+      </div>
       <Form />
+      <section className='text-center pt-10'>
+        <p>Don't have an account?</p>
+        <a href='/' className='font-bold'>Register</a>
+      </section>
 
     </section>
   )
