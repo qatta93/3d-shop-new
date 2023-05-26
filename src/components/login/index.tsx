@@ -31,7 +31,7 @@ const LoginModal = ({setShowLoginModal}) => {
       </div>
       <LoginForm />
       <section className='text-center pt-10'>
-        <p>Don't have an account?</p>
+        <p>Don&apos;t have an account?</p>
         <button className='font-bold' onClick={() => setShowLoginModal(((current:boolean) => !current))}>Register</button>
       </section>
 
