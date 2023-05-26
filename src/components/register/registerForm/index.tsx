@@ -2,7 +2,7 @@ import Button from '@/components/button'
 import Input from '@/components/input'
 import React from 'react'
 
-export const Form = () => {  
+export const RegisterForm = () => {  
   
   const onChange = () =>{
     return ''
@@ -12,9 +12,18 @@ export const Form = () => {
     <form action="" className='flex flex-col space-y-3 justify-center items-center'>
       <Input
         state={'default'}
+        label={'Name'}
+        value={() => onChange()}
+        placeholder={'Name*'}
+        className={'btn-xs w-[350px]'}
+        name={'name'}
+        startIcon={'user'}
+      />
+      <Input
+        state={'default'}
         label={'Email'}
         value={() => onChange()}
-        placeholder={'Email address'}
+        placeholder={'Email address*'}
         className={'btn-xs w-[350px]'}
         name={'email'}
         startIcon={'email'}
@@ -23,7 +32,16 @@ export const Form = () => {
         state={'default'}
         label={'Password'}
         value={() => onChange()}
-        placeholder={'Password'}
+        placeholder={'Password*'}
+        className={'btn-xs w-[350px]'}
+        name={'Password'}
+        startIcon={'lock'}
+      />
+      <Input
+        state={'default'}
+        label={'Password'}
+        value={() => onChange()}
+        placeholder={'Repeat password*'}
         className={'btn-xs w-[350px]'}
         name={'Password'}
         startIcon={'lock'}
@@ -34,7 +52,7 @@ export const Form = () => {
         name={'continue'}
         type={'submit'}
         >
-        CONTINUE
+        REGISTER
       </Button>
     </form>
   )

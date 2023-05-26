@@ -1,11 +1,14 @@
 import { NextPage } from 'next'
-import React from 'react'
+import React, { useState } from 'react'
 import LoginModal from '@/components/login';
 import Image from 'next/image';
+import RegisterModal from '@/components/register';
 
 
 
 const Login: NextPage = () => {
+
+  const [showLoginModal, setShowLoginModal] = useState<boolean>(true)
 
   return (
     <section className='flex bg-white '>
@@ -13,7 +16,7 @@ const Login: NextPage = () => {
         <Image src="/images/login-graph.png" alt="login"  layout='fill' className="absolute"/>
       </div>
       <div className='flex flex-1 py-10 align-middle justify-center'>
-        <LoginModal />
+        {showLoginModal ? <LoginModal setShowLoginModal={setShowLoginModal}/> : <RegisterModal setShowLoginModal={setShowLoginModal}/>}
       </div>
     </section>
   )
