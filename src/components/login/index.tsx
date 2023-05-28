@@ -5,7 +5,7 @@ import { LoginForm } from './loginForm';
 
 const LoginModal = ({setShowLoginModal}) => {
   return (
-    <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] p-[45px]'>
+    <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] h-[655px] px-[45px] py-[20px]'>
       <h1>Login</h1>
       <p className='pb-10'>We are happy to have you with us!</p>
       <Button
