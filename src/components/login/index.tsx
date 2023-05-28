@@ -10,7 +10,7 @@ const LoginModal = ({setShowLoginModal}) => {
       <p className='pb-10'>We are happy to have you with us!</p>
       <Button
         variant={'secondary'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs w-[350px] leading-[50px]'}
         name={'Continue with Google'}
         startIcon={<Image src="/images/google.png" alt="google-login" height={25} width={25}/>
       }
@@ -19,7 +19,7 @@ const LoginModal = ({setShowLoginModal}) => {
       </Button>
       <Button
         variant={'secondary'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs w-[350px] leading-[50px]'}
         name={'Continue with Github'}
         startIcon={<Image src="/images/github.png" alt="github-login" height={25} width={25}/>
       }
