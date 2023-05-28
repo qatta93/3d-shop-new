@@ -16,7 +16,7 @@ export const RegisterForm = () => {
         value={() => onChange()}
         placeholder={'Name*'}
         className={'btn-xs w-[350px]'}
-        name={'name'}
+        name={'user'}
         startIcon={'user'}
       />
       <Input
