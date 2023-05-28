@@ -36,6 +36,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       ...rest
     } = props;
     return (
+      <>
       <input
         ref={ref}
         {...rest}
@@ -43,6 +44,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         placeholder={props.placeholder}
         onClick={props.onClick}
         className={cx(
+          'relative',
           'rounded-lg',
           `bg-[url(/images/${props.startIcon}.png)]`,
           'bg-no-repeat',
@@ -54,7 +56,9 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           className
         )}
       >
-      </input>
+      </input>    
+      {/* <img src={`/images/${props.startIcon}.png`} className="absolute mr-2 w-10" alt="Search Icon" /> */}
+      </>
     );
   }
 );
