@@ -18,8 +18,6 @@ export const LoginForm = () => {
     });
   };
 
-  console.log(loginForm)
-
   return (
     <form action="" className='flex flex-col space-y-3 justify-center items-center'>
       <Input
@@ -35,6 +33,7 @@ export const LoginForm = () => {
       <Input
         state={'default'}
         label={'Password'}
+        type={"password"}
         value={loginForm.password}
         onChange={handleChange}
         placeholder={'Password'}

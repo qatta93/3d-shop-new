@@ -4,6 +4,7 @@ import cx from 'clsx';
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   state?: 'default' | 'error';
+  type?: string,
   label: string,
   value: any,
   placeholder?: string,
@@ -40,7 +41,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       <input
         ref={ref}
         {...rest}
-        type='input'
+        type={props.type? props.type : 'input'}
         placeholder={props.placeholder}
         onClick={props.onClick}
         className={cx(
