@@ -1,19 +1,32 @@
 import Button from '@/components/button'
 import Input from '@/components/input'
-import React from 'react'
+import { LoginFormProps } from '@/components/types'
+import React, { useState } from 'react'
 
 export const LoginForm = () => {  
-  
-  const onChange = () =>{
-    return ''
-  }
+
+  const [loginForm, setLoginForm] = useState<LoginFormProps>({
+    email: "",
+    password: "",
+  })
+
+  const handleChange = (evt) => {
+    const { name, value } = evt.target;
+      setLoginForm({
+      ...loginForm,
+      [name]: value,
+    });
+  };
+
+  console.log(loginForm)
 
   return (
     <form action="" className='flex flex-col space-y-3 justify-center items-center'>
       <Input
         state={'default'}
         label={'Email'}
-        value={() => onChange()}
+        value={loginForm.email}
+        onChange={handleChange}
         placeholder={'Email address'}
         className={'btn-xs w-[350px]'}
         name={'email'}
@@ -22,10 +35,11 @@ export const LoginForm = () => {
       <Input
         state={'default'}
         label={'Password'}
-        value={() => onChange()}
+        value={loginForm.password}
+        onChange={handleChange}
         placeholder={'Password'}
         className={'btn-xs w-[350px]'}
-        name={'Password'}
+        name={'password'}
         startIcon={'lock'}
       />
       <Button
