@@ -80,3 +80,10 @@ export interface LoginFormProps {
   email: string,
   password: string,
 }
+
+export interface RegisterFormProps {
+  name: string,
+  email: string,
+  password: string,
+  repeatPassword: string,
+}

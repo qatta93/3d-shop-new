@@ -1,13 +1,7 @@
 import Button from '@/components/button'
 import Input from '@/components/input'
+import { RegisterFormProps } from '@/components/types'
 import React, { useState } from 'react'
-
-interface RegisterFormProps {
-  name: string,
-  email: string,
-  password: string,
-  repeatPassword: string,
-}
 
 export const RegisterForm = () => {  
   
