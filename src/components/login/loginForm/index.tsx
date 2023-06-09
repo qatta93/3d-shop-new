@@ -27,7 +27,7 @@ export const LoginForm = () => {
         value={loginForm.email}
         onChange={handleChange}
         placeholder={'Email address'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs'}
         name={'email'}
         startIcon={'email'}
       />
@@ -38,7 +38,7 @@ export const LoginForm = () => {
         value={loginForm.password}
         onChange={handleChange}
         placeholder={'Password'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs'}
         name={'password'}
         startIcon={'lock'}
       />

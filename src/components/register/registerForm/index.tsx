@@ -30,7 +30,7 @@ export const RegisterForm = () => {
         value={registerForm.name}
         onChange={handleChange}
         placeholder={'Name*'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs'}
         name={'name'}
         startIcon={'user'}
       />
@@ -40,7 +40,7 @@ export const RegisterForm = () => {
         value={registerForm.email}
         onChange={handleChange}
         placeholder={'Email address*'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs'}
         name={'email'}
         startIcon={'email'}
       />
@@ -51,7 +51,7 @@ export const RegisterForm = () => {
         value={registerForm.password}
         onChange={handleChange}
         placeholder={'Password*'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs'}
         name={'password'}
         startIcon={'lock'}
       />
@@ -62,7 +62,7 @@ export const RegisterForm = () => {
         value={registerForm.repeatPassword}
         onChange={handleChange}
         placeholder={'Repeat password*'}
-        className={'btn-xs w-[350px]'}
+        className={'btn-xs'}
         name={'repeatPassword'}
         startIcon={'lock'}
       />
