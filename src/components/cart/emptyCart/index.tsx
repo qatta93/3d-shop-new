@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const EmptyCart = () => {  
   
   return (
-    <section className='flex flex-col items-center justify-center '>
+    <section className='flex flex-col items-center justify-center overflow-y-scroll'>
       <div className='relative h-[350px] w-[350px] lg:h-[420px] lg:w-[400px] mx-auto'>
         <Image src="/images/cart-empty.png" alt="bcg"  layout='fill' className="absolute"/>
       </div>
@@ -20,7 +20,6 @@ export const EmptyCart = () => {
           SHOP NOW
         </Button>
       </Link>
-
     </section>
   )
 }
