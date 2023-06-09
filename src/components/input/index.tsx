@@ -66,10 +66,10 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       </input>
       <img src={`/images/${props.startIcon}.png`} className="absolute ml-4 mr-2 w-[25px] top-[13px]" alt={`${props.startIcon}`} />
       {props.type === 'password' && showPassword === true &&
-        <Icon icon="heroicons-outline:eye" className="h-8 w-8  text-grey-light ml-72 absolute top-[10px] cursor-pointer" onClick={() => {setShowPassword(false); setPasswordInputType('password')}} />
+        <Icon icon="heroicons-outline:eye" className="h-[25px] w-[25px] text-grey-light ml-[300px] absolute top-[13px] cursor-pointer" onClick={() => {setShowPassword(false); setPasswordInputType('password')}} />
       }
       {props.type === 'password' && showPassword === false &&
-        <Icon icon="heroicons-outline:eye-off" className="h-8 w-8  text-grey-light ml-72 absolute top-[10px] cursor-pointer" onClick={() => {setShowPassword(true); setPasswordInputType('input')}}/>
+        <Icon icon="heroicons-outline:eye-off" className="h-[25px] w-[25px] text-grey-light ml-[300px] absolute top-[13px] cursor-pointer" onClick={() => {setShowPassword(true); setPasswordInputType('input')}}/>
       }
       </div>
     );
