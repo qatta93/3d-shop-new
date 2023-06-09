@@ -34,7 +34,7 @@ export const ProductsCartModal = () => {
           <Image src="/images/arrow-left.png" alt="back"  width={35} height={20}/>
           <p className='ml-4 text-lg leading-[34px]'>CONTINUE SHOPPING</p>
         </div>
-        <p className='text-[24px] leading-[34px] font-bold'><span className='text-grey-light text-[16px] mr-4'>TOTAL</span>550$</p>
+        <p className='text-[24px] leading-[34px] font-bold'><span className='text-grey-light text-[16px] mr-4'>TOTAL</span>365$</p>
       </div>
     </article>
   )

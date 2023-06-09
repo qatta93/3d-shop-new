@@ -43,7 +43,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const [passwordInputType, setPasswordInputType] = useState('password')
     
     return (
-      <div className='relative'>
+      <div className='relative mx-auto'>
       <input
         ref={ref}
         {...rest}
@@ -59,13 +59,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
           'bg-[left_15px_top_10px]',
           'bg-[length:30px_auto]',
           `placeholder:${props.startIcon && 'px-10'}`,
-          'pl-14',
+          `${props.startIcon? 'pl-14' : 'pl-6'}`,
           styles.state(state),
           className
         )}
       >
       </input>
-      <img src={`/images/${props.startIcon}.png`} className="absolute ml-4 mr-2 w-[25px] top-[13px]" alt={`${props.startIcon}`} />
+      {props.startIcon && <img src={`/images/${props.startIcon}.png`} className="absolute ml-4 mr-2 w-[25px] top-[13px]" alt={`${props.startIcon}`} />}
       {props.type === 'password' && showPassword === true &&
         <Icon icon="heroicons-outline:eye" className="h-[25px] w-[25px] text-grey-light ml-[300px] absolute top-[13px] cursor-pointer" onClick={() => {setShowPassword(false); setPasswordInputType('password')}} />
       }

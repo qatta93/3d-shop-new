@@ -9,7 +9,7 @@ export const ProductsCart = ({dummyLocalStorage}:any) => {
       <div className='flex flex-[65%] align-middle justify-center'>
         <ProductsCartModal />
       </div>
-      <div  className='flex flex-[35%] align-middle justify-center'>
+      <div  className='flex flex-[35%] justify-end'>
         <PaymentModal/>
       </div>
     </article>
