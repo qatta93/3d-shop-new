@@ -33,6 +33,8 @@
     "pg": "^8.7.3",
     "postgraphile": "^4.3.0",
     "react": "^18.0.0",
+    "react-credit-cards": "^0.8.3",
+    "react-credit-cards-2": "^1.0.1",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.0",
     "responsive-loader": "^3.0.4",
