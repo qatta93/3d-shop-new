@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import cx from 'clsx';
+import { Icon } from '@iconify/react';
+
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
@@ -17,7 +19,7 @@ const styles = {
     state: InputProps['state'],
   ) => {
     if (state === 'default') {
-      return 'text-grey-dark bg-white shadow-inner shadow-grey-light hover:border-[1px] border-secondary-medium px-[20px]';
+      return 'text-grey-dark font-light bg-white shadow-inner shadow-grey-light hover:border-[1px] border-secondary-medium px-[20px]';
     }
     if (state === 'error') {
       return 'text-grey-dark border-[1px] border-grey-light bg-white font-light leading-5';
@@ -36,12 +38,16 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       onClick,
       ...rest
     } = props;
+
+    const [showPassword, setShowPassword] = useState(false);
+    const [passwordInputType, setPasswordInputType] = useState('password')
+    
     return (
-      <>
+      <div className='relative'>
       <input
         ref={ref}
         {...rest}
-        type={props.type? props.type : 'input'}
+        type={props.type === 'password'? passwordInputType : 'input'}
         placeholder={props.placeholder}
         onClick={props.onClick}
         className={cx(
@@ -58,8 +64,13 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         )}
       >
       </input>    
-      {/* <img src={`/images/${props.startIcon}.png`} className="absolute mr-2 w-10" alt="Search Icon" /> */}
-      </>
+      {props.type === 'password' && showPassword === true &&
+        <Icon icon="heroicons-outline:eye" className="h-8 w-8  text-grey-light ml-72 absolute top-[10px] cursor-pointer" onClick={() => {setShowPassword(false); setPasswordInputType('password')}} />
+      }
+      {props.type === 'password' && showPassword === false &&
+        <Icon icon="heroicons-outline:eye-off" className="h-8 w-8  text-grey-light ml-72 absolute top-[10px] cursor-pointer" onClick={() => {setShowPassword(true); setPasswordInputType('input')}}/>
+      }
+      </div>
     );
   }
 );

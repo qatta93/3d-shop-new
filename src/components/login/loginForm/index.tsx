@@ -23,6 +23,7 @@ export const LoginForm = () => {
       <Input
         state={'default'}
         label={'Email'}
+        type={"input"}
         value={loginForm.email}
         onChange={handleChange}
         placeholder={'Email address'}
