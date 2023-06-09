@@ -19,10 +19,10 @@ const styles = {
     state: InputProps['state'],
   ) => {
     if (state === 'default') {
-      return 'text-grey-dark font-light bg-white shadow-inner shadow-grey-light hover:border-[1px] border-secondary-medium px-[20px]';
+      return 'text-grey-dark bg-white shadow-inner shadow-grey-light hover:border-[1px] border-secondary-medium px-[20px]';
     }
     if (state === 'error') {
-      return 'text-grey-dark border-[1px] border-grey-light bg-white font-light leading-5';
+      return 'text-grey-dark border-[1px] border-grey-light bg-white leading-5';
     }
     return 'primary';
   },
@@ -52,6 +52,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         onClick={props.onClick}
         className={cx(
           'relative',
+          'font-light',
           'rounded-lg',
           `bg-[url(/images/${props.startIcon}.png)]`,
           'bg-no-repeat',
