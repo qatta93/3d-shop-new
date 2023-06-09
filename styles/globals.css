@@ -38,7 +38,7 @@ a:hover {
 }
 
 h1 {
-  @apply font-changa-one text-center mx-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] text-[31px] leading-[38px] sm:text-[42px] sm:leading-[50px] lg:text-[55px] lg:leading-[65px];
+  @apply font-changa-one text-center mx-auto max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] text-[31px] leading-[38px] sm:text-[42px] sm:leading-[50px] lg:text-[45px] lg:leading-[60px];
 }
 
 input::placeholder {
