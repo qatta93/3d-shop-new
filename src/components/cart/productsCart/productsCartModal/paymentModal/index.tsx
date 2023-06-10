@@ -1,7 +1,6 @@
 import Button from "@/components/button";
 import Input from "@/components/input";
 import React, { useState } from "react";
-import Cards from "react-credit-cards-2";
 import Image from "next/image";
 
 export const PaymentModal = () => {
