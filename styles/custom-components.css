@@ -36,3 +36,8 @@
 .btn-xs {
   @apply h-[50px] w-[350px] text-[18px] leading-[50px] font-semibold;
 }
+
+.btn-xxs {
+  @apply h-[50px] w-[290px] text-[18px] leading-[50px] font-semibold;
+}
+

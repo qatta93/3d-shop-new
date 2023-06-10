@@ -79,7 +79,7 @@ export const PaymentModal = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           placeholder={"Name"}
-          className={"btn-xs w-[290px]"}
+          className={"btn-xxs"}
           name={"name"}
         />
         <Input
@@ -90,7 +90,7 @@ export const PaymentModal = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           placeholder={"Card number"}
-          className={"btn-xs w-[290px]"}
+          className={"btn-xxs"}
           name={"number"}
         />
         <Input
@@ -101,7 +101,7 @@ export const PaymentModal = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           placeholder={"Expiration date"}
-          className={"btn-xs w-[290px]"}
+          className={"btn-xxs"}
           name={"expiry"}
         />
         <Input
@@ -112,7 +112,7 @@ export const PaymentModal = () => {
           onChange={handleInputChange}
           onFocus={handleInputFocus}
           placeholder={"CVC"}
-          className={"btn-xs w-[290px]"}
+          className={"btn-xxs"}
           name={"cvc"}
         />
       </div>
