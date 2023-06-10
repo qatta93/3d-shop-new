@@ -31,10 +31,12 @@ export const ProductsCartModal = () => {
       })}
       <div className='flex flex-row w-full justify-between mt-10'>
         <div className='flex flex-row'>
-          <Image src="/images/arrow-left.png" alt="back"  width={35} height={20}/>
-          <p className='ml-4 text-lg leading-[34px]'>CONTINUE SHOPPING</p>
+          <div className='h-[27px] w-[27px] sm:h-[35px] sm:w-[35px] relative mx-auto my-auto'>
+          <Image src="/images/arrow-left.png" alt="back" layout='fill'/>
+          </div>
+          <p className='ml-4 text-md sm:text-lg leading-[36px] sm:leading-[34px]'>CONTINUE SHOPPING</p>
         </div>
-        <p className='text-[24px] leading-[34px] font-bold'><span className='text-grey-light text-[16px] mr-4'>TOTAL</span>365$</p>
+        <p className='text-[20px] sm:text-[24px] leading-[34px] font-bold'><span className='text-grey-light sm:text-[16px] mr-4'>TOTAL</span>365$</p>
       </div>
     </article>
   )

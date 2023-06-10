@@ -119,7 +119,7 @@ export const PaymentModal = () => {
       <Button
         variant={"primary"}
         className={
-          "uppercase btn-xs w-[320px] rounded-t-none absolute bottom-0"
+          "uppercase btn-xs w-[320px] max-w-[320px] rounded-t-none absolute bottom-0 right-0"
         }
         name={"continue"}
         type={"submit"}

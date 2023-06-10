@@ -32,7 +32,7 @@ const Cart: NextPage = () => {
 
 
   return (
-    <section className='flex flex-col overflow-scroll bg-white px-[20px] sm:px-[40px] lg:px-[112px] items-center text-center sm:text-left'>
+    <section className='flex flex-col  overflow-scroll  bg-white px-[30px] sm:px-[40px] lg:px-[112px] items-center text-center sm:text-left'>
       <div className='flex w-full pt-20'>
         <h1 className='lg:ml-0'>Shopping Cart</h1>      
       </div>
