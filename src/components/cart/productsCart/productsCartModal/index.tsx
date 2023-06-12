@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import { ProductCart } from './productCart';
 
 const dummyLocalStorage = [{
@@ -30,12 +31,14 @@ export const ProductsCartModal = () => {
         return <ProductCart product={product} key={product.id}/>
       })}
       <div className='flex flex-row w-full justify-between mt-10'>
-        <div className='flex flex-row'>
-          <div className='h-[27px] w-[27px] sm:h-[35px] sm:w-[35px] relative mx-auto my-auto'>
-          <Image src="/images/arrow-left.png" alt="back" layout='fill'/>
+        <Link href='/products'>
+          <div className='flex flex-row'>
+            <div className='h-[27px] w-[27px] sm:h-[35px] sm:w-[35px] relative mx-auto my-auto'>
+            <Image src="/images/arrow-left.png" alt="back" layout='fill' className='cursor-pointer'/>
+            </div>
+            <p className='ml-4 text-md sm:text-lg leading-[36px] sm:leading-[34px] cursor-pointer'>CONTINUE SHOPPING</p>
           </div>
-          <p className='ml-4 text-md sm:text-lg leading-[36px] sm:leading-[34px]'>CONTINUE SHOPPING</p>
-        </div>
+        </Link>
         <p className='text-[20px] sm:text-[24px] leading-[34px] font-bold'><span className='text-grey-light sm:text-[16px] mr-4'>TOTAL</span>365$</p>
       </div>
     </article>

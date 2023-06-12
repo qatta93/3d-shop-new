@@ -12,8 +12,8 @@ const Login: NextPage = () => {
 
   return (
     <section className='flex bg-white lg:flex-row flex-col-reverse '>
-      <div className='lg:flex-1 h-[500px] lg:h-[calc(100vh-40px)] bg-primary-light bg-[url(/images/bcg-purple.png)] bg-no-repeat bg-[left_0px_right_0px] bg-cover lg:bg-contain'>
-        <div className='h-[100%] max-h-[500px] max-w-[600px] xl:max-w-[800px] relative mx-auto my-auto'>
+      <div className='flex flex-1 lg:h-[calc(100vh-40px)] py-10 align-middle justify-center my-auto bg-primary-light bg-[url(/images/bcg-purple.png)] bg-no-repeat bg-[left_0px_right_0px] bg-cover lg:bg-contain'>
+        <div className='relative h-[400px] w-[500px] lg:h-[500px] lg:w-[600px] my-auto'>
           <Image src="/images/login-graph.png" alt="login"  layout='fill' className="absolute "/>
         </div>
       </div>
