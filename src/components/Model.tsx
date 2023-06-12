@@ -19,7 +19,7 @@ const Model = (item) => {
 
   useEffect(() => {
     const loader = new GLTFLoader();
-    loader.load(`models/${item.item.type}/${item.id}/scene.gltf`, async (gltf) => {
+    loader.load(`models/${item.type}/${item.id}/scene.gltf`, async (gltf) => {
       if(item.id === 'chair1') {
         gltf.scene.children[0].scale.multiplyScalar(1.2);
       }
@@ -78,7 +78,7 @@ const Model = (item) => {
       ) : (
         <Html center style={{color: 'white', height: '6rem'}}>
           <p>Loading..</p>
-          <img src="images/loading2.gif" alt="" style={{height: '4rem', width: '15rem'}}/>
+          <img src="/images/loading2.gif" alt="" style={{height: '4rem', width: '15rem'}}/>
         </Html>
       )}
     </>
