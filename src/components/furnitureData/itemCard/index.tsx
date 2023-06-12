@@ -21,7 +21,7 @@ export const ItemCard = ({furniture}) => {
       </section>
         <section className='flex gap-[5px] my-2 absolute bottom-0 left-1/2 transform -translate-x-1/2'>
           {views.map((w:number) => {
-            return <Image width={20} height={20} src={showModel === w ? "/images/circle_full.png" : "/images/circle.png"} alt="circle" className='cursor-pointer' onClick={() => setShowModel(w)}/>
+            return <Image width={20} height={20} key={w} src={showModel === w ? "/images/circle_full.png" : "/images/circle.png"} alt="circle" className='cursor-pointer' onClick={() => setShowModel(w)}/>
           })}
         </section>
       </div>
