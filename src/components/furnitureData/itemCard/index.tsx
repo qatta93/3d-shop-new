@@ -1,17 +1,14 @@
 import Button from '@/components/button'
-import React, { useState } from 'react'
 import Image from 'next/image';
 import { Canvas } from '@react-three/fiber';
 import Lights from '@/components/Lights';
 import Model from '@/components/Model';
 
 export const ItemCard = ({furniture}) => {
-  const [showModel, setShowModel] = useState<number>(1);
-  const views = [1, 2, 3];
+
   return (
     <article className='w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
       <div className='h-[270px] relative cursor-pointer'>
-      <section className='w-full h-full'>
         {/* @ts-ignore */}
         <Canvas camera={{ position: [0, 0, 300]}} > 
           <Lights />
@@ -20,12 +17,6 @@ export const ItemCard = ({furniture}) => {
         <div className='absolute bottom-2 right-4'>
           <Image width={50} height={50} src="/images/loupe.png" alt="loupe" className=' w-8 ' />
         </div>
-      </section>
-        <section className='flex gap-[5px] my-2 absolute bottom-0 left-1/2 transform -translate-x-1/2'>
-          {views.map((w:number) => {
-            return <Image width={20} height={20} key={w} src={showModel === w ? "/images/circle_full.png" : "/images/circle.png"} alt="circle" className='cursor-pointer' onClick={() => setShowModel(w)}/>
-          })}
-        </section>
       </div>
       <section className='bg-primary-light px-6 py-4'>
         <div className='flex justify-between text-[18px] font-semibold'>
