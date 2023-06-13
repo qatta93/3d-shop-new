@@ -17,8 +17,8 @@ export const ItemCard = ({furniture}) => {
           <Lights />
           <Model id={furniture.id} furniture={furniture}/>
         </Canvas>
-        <div className='absolute bottom-4 right-4'>
-          <Image width={40} height={40} src="/images/loupe.png" alt="loupe" className='opacity-[20%] w-8 ' />
+        <div className='absolute bottom-2 right-4'>
+          <Image width={50} height={50} src="/images/loupe.png" alt="loupe" className=' w-8 ' />
         </div>
       </section>
         <section className='flex gap-[5px] my-2 absolute bottom-0 left-1/2 transform -translate-x-1/2'>

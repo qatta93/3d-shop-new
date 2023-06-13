@@ -1,68 +1,73 @@
 [{
   "id": "chair1",
   "type": "chairs",
-  "name": "Comfy Chair",
-  "price": "95$",
+  "name": "Swing Chair",
+  "price": "195$",
   "color": "black",
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",
-  "embed": "https://sketchfab.com/models/763c5061112d4432addd898b5f4a17ae/embed",
+  "embed": "https://sketchfab.com/models/92463f2b44624180a4ed8488ce08eb83/embed",
   "img": "/images/chair1.png",
-  "modelScale": 1.2,
-  "modelPosition": [0, 0, 0]
+  "modelScale": 65,
+  "modelPosition": [0, -10, 0]
 },
 {
   "id": "chair2",
   "type": "chairs",
-  "name": "Victorian Style Chair",
+  "name": "Lounge Chair",
   "price": "350$",
-  "color": "oak",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  "embed": "https://sketchfab.com/models/5a080539c53b40c8b257b57c5677e2f0/embed",
+  "color": "yellow",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  
+  "embed": "https://sketchfab.com/models/ddab2f2c25e944fba590a8d51bbf8174/embed",
   "img": "/images/chair2.png",
-  "modelScale": 1.9,
-  "modelPosition": [0, -30, 0]
+  "modelScale": 160,
+  "modelPosition": [0, 0, 0]
 },
 {
   "id": "table1",
   "type": "tables",
-  "name": "Egyptian Table",
-  "price": "185$",
-  "color": "oak",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  "embed": "https://sketchfab.com/models/e0c4de506dac4c05897eba02932b0c27/embed",
+  "name": "Coffee Table",
+  "price": "55$",
+  "color": "pine",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  
+  "embed": "https://sketchfab.com/models/52a1075958804cd18f96701ad3f49406/embed",
   "img": "/images/table1.png",
-  "modelScale": 6,
-  "modelPosition": [0, 60, 0]
+  "modelScale": 0.24,
+  "modelPosition": [0, 30, 0]
 },
 {
   "id": "table2",
   "type": "tables",
-  "name": "Antique Table",
+  "name": "Marble Side Table",
   "price": "300$",
-  "color": "oak",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  "embed": "https://sketchfab.com/models/f01054c29829452a9f87437de57a3f6f/embed",
+  "color": "marble",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  
+  "embed": "https://sketchfab.com/models/824c8a6d7fe44a76ae09fb5e07c5f284/embed",
   "img": "/images/table2.png",
-  "modelScale": 6,
-  "modelPosition": [0, -10, 0]
+  "modelScale": 160,
+  "modelPosition": [0, 20, 0]
 },
 {
   "id": "lamp1",
   "type": "lamps",
-  "name": "Night Lamp",
-  "price": "65$",
+  "name": "Ring Ceiling Lamp",
+  "price": "155$",
   "color": "steel",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  "embed": "https://sketchfab.com/models/59caa390eda24394bd58156da32e4ef4/embed",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  
+  "embed": "https://sketchfab.com/models/f0aca22b3c4d4ae298502a7e8d4c157e/embed",
   "img": "/images/lamp1.png",
-  "modelScale": 25,
-  "modelPosition": [0, 60, 0]
+  "modelScale": 1.4,
+  "modelPosition": [0, 150, 0]
 },
 {
   "id": "lamp2",
   "type": "lamps",
-  "name": "Simple Lamp",
-  "price": "100$",
+  "name": "Modern Ceiling Lamp",
+  "price": "95$",
   "color": "steel",
-  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  "embed": "https://sketchfab.com/models/813f5aeef3f3430d947f3879c6941719/embed",
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.",  
+  "embed": "https://sketchfab.com/models/79090c6c8e3b4504ad70ed76efb0940b/embed",
   "img": "/images/lamp2.png",
-  "modelScale": 20,
-  "modelPosition": [0, 60, 0]
+  "modelScale": 110,
+  "modelPosition": [0, 80, 0]
 }
 ]

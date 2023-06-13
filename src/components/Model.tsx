@@ -20,7 +20,7 @@ const Model = (item) => {
 
   useEffect(() => {
     const loader = new GLTFLoader();
-    loader.load(`/models/${item.furniture.type}/${item.furniture.id}/scene.gltf`, async (gltf) => {
+    loader.load(`/models/${item.furniture.type}/${item.furniture.id}/model.glb`, async (gltf) => {
       gltf.scene.children[0].scale.multiplyScalar(item.furniture.modelScale);
       gltf.scene.children[0].position.set(position[0], position[1], position[2])
 
