@@ -9,15 +9,17 @@ export const ItemCard = ({furniture}) => {
   const [showModel, setShowModel] = useState<number>(1);
   const views = [1, 2, 3];
   return (
-    <article className='w-[320px] lg:w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
+    <article className='w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
       <div className='h-[270px] relative cursor-pointer'>
-      <section className='relative w-full h-full'>
+      <section className='w-full h-full'>
         {/* @ts-ignore */}
         <Canvas camera={{ position: [0, 0, 300]}} > 
           <Lights />
           <Model id={furniture.id} furniture={furniture}/>
         </Canvas>
-        <Image width={40} height={40} src="/images/loupe.png" alt="loupe" className='opacity-20 w-8 absolute bottom-4 right-4' />
+        <div className='absolute bottom-4 right-4'>
+          <Image width={40} height={40} src="/images/loupe.png" alt="loupe" className='opacity-[20%] w-8 ' />
+        </div>
       </section>
         <section className='flex gap-[5px] my-2 absolute bottom-0 left-1/2 transform -translate-x-1/2'>
           {views.map((w:number) => {
