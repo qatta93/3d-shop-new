@@ -3,12 +3,16 @@ import Image from 'next/image';
 import { Canvas } from '@react-three/fiber';
 import Lights from '@/components/Lights';
 import Model from '@/components/Model';
+import { EmbedModelPopup } from '@/components/EmbedModelPopup';
+import { useState } from 'react';
 
 export const ItemCard = ({furniture}) => {
+  const [showEmbedModelPopup, setShowEmbedModelPopup] = useState<boolean>(false)
 
   return (
     <article className='w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
-      <div className='h-[270px] relative cursor-pointer'>
+      {showEmbedModelPopup && <EmbedModelPopup furniture={furniture} setShowEmbedModelPopup={setShowEmbedModelPopup}/>}
+      <div className='h-[270px] relative cursor-pointer' onClick={() => setShowEmbedModelPopup(true)}>
         {/* @ts-ignore */}
         <Canvas camera={{ position: [0, 0, 300]}} > 
           <Lights />
