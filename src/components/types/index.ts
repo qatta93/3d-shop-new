@@ -21,7 +21,9 @@ export interface FurnitureDetailsProps {
   color: string,
   description: string,
   embed: string,
-  img: string
+  img: string,
+  modelScale: number,
+  modelPosition: Array<number>
 }
 
 export interface User {
