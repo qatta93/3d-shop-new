@@ -23,6 +23,7 @@
     "clsx": "^1.2.1",
     "cuid": "^2.1.8",
     "dotenv-cli": "^6.0.0",
+    "formik": "^2.4.1",
     "gsap": "^3.10.4",
     "imagemin-mozjpeg": "^10.0.0",
     "install": "^0.13.0",
