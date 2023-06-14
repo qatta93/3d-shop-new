@@ -22,9 +22,9 @@ const styles = {
       return 'text-grey-dark bg-white shadow-inner shadow-grey-light hover:border-[1px] border-secondary-medium px-[20px]';
     }
     if (state === 'error') {
-      return 'text-grey-dark border-[1px] border-grey-light bg-white leading-5';
+      return 'text-error-light border-[1px] border-error-light bg-white leading-5 shadow-inner shadow-grey-light';
     }
-    return 'primary';
+    return 'default';
   },
 };
 

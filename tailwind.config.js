@@ -32,6 +32,7 @@ module.exports = {
         'secondary-dark': '#E0C623',
         'grey-light': '#BBBBBB',
         'grey-dark': '#4A4B4C',
+        'error-light': '#EE4444'
       },
       backgroundImage: {
         'primary-bcg': "url('/images/bcg-primary.png')",

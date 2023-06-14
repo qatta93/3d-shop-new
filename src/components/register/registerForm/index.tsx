@@ -50,7 +50,6 @@ export const RegisterForm = () => {
         {({
           values,
           errors,
-          touched,
           handleChange,
           handleBlur,
           handleSubmit,
@@ -62,7 +61,7 @@ export const RegisterForm = () => {
             onSubmit={handleSubmit}
           >
             <Input
-              state={"default"}
+              state={errors.name ? 'error' : 'default'}
               label={"Name"}
               value={values.name}
               onChange={handleChange}
@@ -72,9 +71,9 @@ export const RegisterForm = () => {
               name={"name"}
               startIcon={"user"}
             />
-            {errors.name && touched.name && errors.name}
+            <p className="text-error-light text-xs">{errors.name}</p>
             <Input
-              state={"default"}
+              state={errors.email ? 'error' : 'default'}
               label={"Email"}
               value={values.email}
               onChange={handleChange}
@@ -84,9 +83,9 @@ export const RegisterForm = () => {
               name={"email"}
               startIcon={"email"}
             />
-            {errors.email && touched.email && errors.email}
+            <p className="text-error-light text-xs">{errors.email}</p>
             <Input
-              state={"default"}
+              state={errors.password ? 'error' : 'default'}
               label={"Password"}
               type={"password"}
               value={values.password}
@@ -97,9 +96,9 @@ export const RegisterForm = () => {
               name={"password"}
               startIcon={"lock"}
             />
-            {errors.password}
+            <p className="text-error-light text-xs">{errors.password}</p>
             <Input
-              state={"default"}
+              state={errors.repeatPassword ? 'error' : 'default'}
               label={"Password"}
               type={"password"}
               value={values.repeatPassword}
@@ -110,7 +109,7 @@ export const RegisterForm = () => {
               name={"repeatPassword"}
               startIcon={"lock"}
             />
-            {errors.repeatPassword}
+            <p className="text-error-light text-xs">{errors.repeatPassword}</p>
             <Button
               variant={"primary"}
               className={"uppercase btn-xs"}
