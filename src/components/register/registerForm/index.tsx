@@ -1,13 +1,8 @@
 import Button from "@/components/button";
 import Input from "@/components/input";
 import { Formik } from "formik";
-import ReCAPTCHA from "react-google-recaptcha";
 
 export const RegisterForm = () => {
-
-  const onChange = (value) => {
-    console.log("Captcha value:", value);
-  }
 
   return (
     <>
@@ -116,10 +111,6 @@ export const RegisterForm = () => {
               startIcon={"lock"}
             />
             {errors.repeatPassword}
-            <ReCAPTCHA
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
-              onChange={onChange}
-            />
             <Button
               variant={"primary"}
               className={"uppercase btn-xs"}
