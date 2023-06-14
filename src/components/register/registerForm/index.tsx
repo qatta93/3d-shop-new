@@ -69,7 +69,7 @@ export const RegisterForm = () => {
               placeholder={"Name*"}
               className={"btn-xs"}
               name={"name"}
-              startIcon={"user"}
+              startIcon={"name"}
             />
             <p className="text-error-light text-xs">{errors.name}</p>
             <Input
@@ -85,7 +85,7 @@ export const RegisterForm = () => {
             />
             <p className="text-error-light text-xs">{errors.email}</p>
             <Input
-              state={errors.password ? 'error' : 'default'}
+              state={errors.name ? 'error' : 'default'}
               label={"Password"}
               type={"password"}
               value={values.password}
@@ -94,11 +94,11 @@ export const RegisterForm = () => {
               placeholder={"Password*"}
               className={"btn-xs"}
               name={"password"}
-              startIcon={"lock"}
+              startIcon={"password"}
             />
             <p className="text-error-light text-xs">{errors.password}</p>
             <Input
-              state={errors.repeatPassword ? 'error' : 'default'}
+              state={"default"}
               label={"Password"}
               type={"password"}
               value={values.repeatPassword}
@@ -107,7 +107,7 @@ export const RegisterForm = () => {
               placeholder={"Repeat password*"}
               className={"btn-xs"}
               name={"repeatPassword"}
-              startIcon={"lock"}
+              startIcon={"password"}
             />
             <p className="text-error-light text-xs">{errors.repeatPassword}</p>
             <Button

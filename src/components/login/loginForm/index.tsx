@@ -40,7 +40,7 @@ export const LoginForm = () => {
         placeholder={'Password'}
         className={'btn-xs'}
         name={'password'}
-        startIcon={'lock'}
+        startIcon={'password'}
       />
       <Button
         variant={'primary'}
