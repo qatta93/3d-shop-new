@@ -35,6 +35,5 @@ export const handleExpiryDateDisplay = (expiry) => {
     if (i === 2 ) expiryDate.push('/')
     return expiryDate.push(t)
   })
-  console.log(expiryDate.length)
   return expiryDate.join('');
 }
