@@ -31,7 +31,7 @@
     "**/*.tsx",
     "pages/auth/signin.js",
     "context/AppContext.tsx"
-  ],
+, "__tests__/unit/registerForm.test.js"  ],
   "exclude": [
     "node_modules",
     "pages/api/products.ts"
