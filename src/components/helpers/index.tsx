@@ -1,7 +1,8 @@
 export const handleNumberInputChange = (evt, setState) => {
   const { name, value } = evt.target;
-  const regex = /[\/0-9]*$/;
+  const regex = /\d+|\//gm;
   if (value === "" || regex.test(value)) {
+    console.log(value)
     setState((prev) => ({ ...prev, [name]: value }));
   }
 }
