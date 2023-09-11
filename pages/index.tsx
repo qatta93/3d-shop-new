@@ -7,9 +7,9 @@ import { Context } from "../context/AppContext"
 import { ProductsList } from '@/components/ProductsList';
 
 const Home: NextPage = () => {
-   //@ts-ignore
-  // const { state } = useContext(Context);
-  // console.log(state)
+
+  const { state } = useContext(Context);
+  console.log(state)
 
   return (
     <>

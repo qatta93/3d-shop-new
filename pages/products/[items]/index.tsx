@@ -10,6 +10,10 @@ const Products: NextPage = () => {
   const router = useRouter();
   const { items } = router.query;
 
+  //    @ts-ignore
+  // const { state } = useContext(Context);
+  // console.log(state)
+
   const currentItems = itemsDetails.filter((item) => item.type === items)
 
   return (
@@ -22,13 +26,13 @@ const Products: NextPage = () => {
         </section>
         <section className='flex-1'>
           <div className='flex flex-wrap justify-between gap-x-1'>
-            <div className='relative h-[40px] w-[40px] mt-64 hidden xl:block'>
+            {/* <div className='relative h-[40px] w-[40px] mt-64 hidden xl:block'>
               <Image src="/images/arrow-left.png" alt="arrow"  height={40} width={40} className="absolute cursor-pointer"/>
-            </div>
+            </div> */}
             <FurnitureData data={currentItems} Component={ItemCard}/>
-            <div className='relative h-[40px] w-[40px] mt-64 hidden xl:block'>
+            {/* <div className='relative h-[40px] w-[40px] mt-64 hidden xl:block'>
             <Image src="/images/arrow-right.png" alt="arrow"  layout='fill' className="absolute cursor-pointer"/>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>

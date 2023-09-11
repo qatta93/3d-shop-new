@@ -4,10 +4,27 @@ import { Canvas } from '@react-three/fiber';
 import Lights from '@/components/Lights';
 import Model from '@/components/Model';
 import { EmbedModelPopup } from '@/components/EmbedModelPopup';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { Context } from "context/AppContext";
 
 export const ItemCard = ({furniture}) => {
   const [showEmbedModelPopup, setShowEmbedModelPopup] = useState<boolean>(false)
+
+   //@ts-ignore
+  const { state, dispatch } = useContext(Context);
+
+  console.log(furniture.id)
+
+  const addToCart = () => {    
+    console.log('dzialallll')
+    dispatch({
+    type: "ADD_PRODUCT_QUANTITY",
+    payload: furniture.id,
+    payloadQuantity: 1,
+  })
+}
+
+  console.log(state)
 
   return (
     <article className='w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
@@ -34,7 +51,9 @@ export const ItemCard = ({furniture}) => {
         variant={'primary'}
         className={'btn-xs rounded-none rounded-b-lg'}
         name={'Add to cart'}
-        startIcon={<Image src="/images/cart.png" alt="cart" height={20} width={25}/>
+        startIcon={<Image src="/images/cart.png" alt="cart" height={20} width={25}
+        onClick={() => addToCart()}
+      />
       }
         >
         Add to cart

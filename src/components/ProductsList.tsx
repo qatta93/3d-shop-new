@@ -12,9 +12,9 @@ export const ProductsList = () => {
         <div className='flex flex-wrap xl:flex-nowrap px-[20px] sm:px-[40px] lg:px-[112px]'>
           <h2 className='rotate-180 pb-[130px] pl-4 text-center text-[32px] -mb-6 hidden xl:block' style={{ writingMode: 'vertical-rl' }}>PRODUCTS</h2>
           <FurnitureData data={furnitureTypes} Component={FurnitureTypesCard}/>
-          <button className='relative h-[40px] w-[40px] ml-4 mt-64 hidden xl:block'>
+          {/* <button className='relative h-[40px] w-[40px] ml-4 mt-64 hidden xl:block'>
             <Image src="/images/arrow-right.png" alt="arrow"  layout='fill' className="absolute cursor-pointer"/>
-          </button>
+          </button> */}
         </div>
       </section>
     </div>
