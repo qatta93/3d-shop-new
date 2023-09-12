@@ -9,7 +9,7 @@ const productsReducer = (state, action) => {
       ];
     case "DELETE_PRODUCT_FROM_CART":
       const productToDeleteIndex = state.findIndex(item => item.products === action.payload);
-      if(productToDeleteIndex > 0)state.splice(productToDeleteIndex, 1)
+      if(productToDeleteIndex >= 0)state.splice(productToDeleteIndex, 1)
       return [
         ...state,
       ];
