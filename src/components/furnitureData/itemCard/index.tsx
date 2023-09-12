@@ -10,21 +10,27 @@ import { Context } from "context/AppContext";
 export const ItemCard = ({furniture}) => {
   const [showEmbedModelPopup, setShowEmbedModelPopup] = useState<boolean>(false)
 
-   //@ts-ignore
+  //@ts-ignore
   const { state, dispatch } = useContext(Context);
+  console.log(state)
 
-  console.log(furniture.id)
+  const findProductInState = state.filter(item => item.products === furniture.id)
+  const findInitialProductQuantity = findProductInState.map(item => item.quantity)
 
-  const addToCart = () => {    
-    console.log('dzialallll')
+  const addToCart = () => {
+    findProductInState.length > 0 ?
     dispatch({
     type: "ADD_PRODUCT_QUANTITY",
+    payload: furniture.id,
+    payloadQuantity: findInitialProductQuantity,
+  })
+  :
+  dispatch({
+    type: "ADD_PRODUCT_TO_CART",
     payload: furniture.id,
     payloadQuantity: 1,
   })
 }
-
-  console.log(state)
 
   return (
     <article className='w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
@@ -49,7 +55,7 @@ export const ItemCard = ({furniture}) => {
       <section>
       <Button
         variant={'primary'}
-        className={'btn-xs rounded-none rounded-b-lg'}
+        className={'btn-xs rounded-none rounded-b-lg cursor-pointer'}
         name={'Add to cart'}
         startIcon={<Image src="/images/cart.png" alt="cart" height={20} width={25}
         onClick={() => addToCart()}

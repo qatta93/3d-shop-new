@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react';
 
 const useGetInitialState = () => {
 
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
   
   // if(session){
   //   // get data from the database when user is logged in
