@@ -12,7 +12,6 @@ export const ItemCard = ({furniture}) => {
 
   //@ts-ignore
   const { state, dispatch } = useContext(Context);
-  console.log(state)
 
   const findProductInState = state.filter(item => item.products === furniture.id)
   const findInitialProductQuantity = findProductInState.map(item => item.quantity)
