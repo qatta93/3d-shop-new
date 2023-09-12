@@ -32,7 +32,7 @@ export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
     {(window.location.pathname == '/') ?
     ''
     :
-    <section className='fixed top-20 px-[20px] py-[4px] sm:py-[6px] sm:px-[40px] lg:px-[112px]'>
+    <section className='absolute top-20 px-[20px] py-[4px] sm:py-[6px] sm:px-[40px] lg:px-[112px]'>
       <BackButton />
     </section>
     }
