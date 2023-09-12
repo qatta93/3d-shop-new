@@ -21,6 +21,12 @@ export const ProductCart = ({product, quantity}:any) => {
   }
 
   const subtractFromCart = () => {
+    findInitialProductQuantity[0] === 1 ?
+    dispatch({
+      type: "DELETE_PRODUCT_FROM_CART",
+      payload: product,
+    })
+    :
     dispatch({
       type: "SUBTRACT_PRODUCT_QUANTITY",
       payload: product,
@@ -46,12 +52,12 @@ export const ProductCart = ({product, quantity}:any) => {
         <p className='text-[14px] sm:text-[16px] font-semibold'>{productDetails.name}</p>
       </div>
       <div className='flex flex-row my-auto'>
-        <p className='text-grey-light text-[35px] my-auto p-2 sm:p-4' onClick={() => subtractFromCart()}>-</p>
+        <p className='text-grey-light text-[35px] my-auto p-2 sm:p-4 cursor-pointer' onClick={() => subtractFromCart()}>-</p>
         <p className='text-[18px] font-bold my-auto'>{quantity}</p>
-        <p className='text-grey-light text-[25px] my-auto p-2 sm:p-4' onClick={() => addToCart()}>+</p>
+        <p className='text-grey-light text-[25px] my-auto p-2 sm:p-4 cursor-pointer' onClick={() => addToCart()}>+</p>
       </div>
       <p className='text-[14px] sm:text-[18px] font-bold my-auto'>{productDetails.price}</p>
-      <p className='pl-4 sm:pl-0 text-[18px] sm:text-[24px] font-semibold my-auto' onClick={() => deleteFromCart()}>X</p>
+      <p className='pl-4 sm:pl-0 text-[18px] sm:text-[24px] font-semibold my-auto cursor-pointer' onClick={() => deleteFromCart()}>X</p>
     </article>
   )
 }
