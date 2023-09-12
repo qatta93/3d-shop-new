@@ -60,7 +60,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <>
         {startIcon && (
             <span
-              className='mr-4 relative top-[calc(50%-18.75px)]'
+              className='mr-4 relative top-[calc(50%-22.75px)]'
             >
               {startIcon}
             </span>

@@ -33,7 +33,7 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
               <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               }
               {totalQuantity > 0 ?
-              <div className="absolute -right-1 z-10 w-6 h-6 rounded-full inline-flex items-center justify-center bg-white  text-[16px] font-semibold border-solid border-[1px] border-grey-dark">
+              <div className="absolute -right-1 z-10 w-6 h-6 rounded-full inline-flex items-center justify-center bg-white  text-[14px] font-semibold border-solid border-[1px] border-grey-dark">
               {totalQuantity}
               </div>
               :

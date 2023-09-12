@@ -8,7 +8,7 @@ import { EmptyCart } from '../emptyCart';
 export const ProductsCart = ({dummyLocalStorage}:any) => {
     //@ts-ignore
     const { state, dispatch } = useContext(Context);
-    console.log(state)
+
   return (
     <article className='flex flex-col lg:flex-row w-screen px-[10px] sm:px-[40px] lg:px-[112px] mb-12'>
       <div className='flex flex-[65%] align-middle justify-center'>
