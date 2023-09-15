@@ -9,8 +9,8 @@ export const MobileNav = ({openMenu, setOpenMenu}:MobileNavProps) => {
     //@ts-ignore
     const { state, dispatch } = useContext(Context);
 
-    const findQuantity = state.map(item => item.quantity);
-    const totalQuantity = findQuantity.reduce((partialSum, a) => partialSum + a, 0);
+    const findQuantity = state && state.map(item => item.quantity);
+    const totalQuantity = findQuantity && findQuantity.reduce((partialSum, a) => partialSum + a, 0);
 
   return (
     <div className='flex'>
