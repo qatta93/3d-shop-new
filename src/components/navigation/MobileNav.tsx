@@ -17,7 +17,7 @@ export const MobileNav = ({openMenu, setOpenMenu}:MobileNavProps) => {
       <NavLink href={'/cart'}>
         <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px] mr-2'>
             <div>
-             {(window.location.href.indexOf("cart") > -1) ?
+             {(typeof window !== "undefined" && window.location.href.indexOf("cart") > -1) ?
               <Image src="/images/cart-filled.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               :
               <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>

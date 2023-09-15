@@ -29,7 +29,7 @@ export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
         {deviceWidth > 600 ? <DesktopNav session={session} signIn={signIn} signOut={signOut}/> : <MobileNav openMenu={openMenu} setOpenMenu={setOpenMenu}/>}
       </section>
     </nav>
-    {(window.location.pathname == '/') ?
+    {(typeof window !== "undefined" && window.location.pathname == '/') ?
     ''
     :
     <section className='absolute top-20 px-[20px] py-[4px] sm:py-[6px] sm:px-[40px] lg:px-[112px]'>
