@@ -3,7 +3,7 @@ import Input from '@/components/input'
 import { LoginFormProps } from '@/components/types'
 import React, { useState } from 'react'
 
-export const LoginForm = () => {  
+export const LoginForm = ({csrfToken}) => {  
 
   const [loginForm, setLoginForm] = useState<LoginFormProps>({
     email: "",

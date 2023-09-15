@@ -5,6 +5,7 @@ import { Context } from "context/AppContext";
 import Image from 'next/image';
 import { DesktopNavProps } from '../types';
 import NavLink from './NavLink';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 
 export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
@@ -16,14 +17,13 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
 
   return (
     <div className='flex h-[35px]'>
-      <NavLink href={'/'}><a>home</a></NavLink>
-      <NavLink href={'/products'}><a>products</a></NavLink>
-      {/* {session ?
+      <NavLink href={'/'}>home</NavLink>
+      <NavLink href={'/products'}>products</NavLink>
+      {session ?
         <NavLink href={'/auth/signin'}><a onClick={() => signOut()}>logout</a></NavLink>
         :
         <NavLink href={'/auth/signin'}><a onClick={() => signIn()}>login</a></NavLink>
-      } */}
-      <NavLink href={'/login'}><a>login</a></NavLink>
+      }
       <NavLink href={'/cart'}>
         <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px]'>
             <div>
@@ -40,7 +40,6 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
               ''
             }
             </div>
-
         </div>
       </NavLink>
     </div>

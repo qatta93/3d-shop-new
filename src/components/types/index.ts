@@ -89,3 +89,11 @@ export interface RegisterFormProps {
   password: string,
   repeatPassword: string,
 }
+
+export interface ProvidersProps {
+  id: string,
+  name: string,
+  type: string,
+  signinUrl: string,
+  callbackUrl: string,
+}
