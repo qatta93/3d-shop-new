@@ -10,9 +10,9 @@ const NavLink = ({href, children, ...props}) => {
 
   return(
     <Link href={href}>
-      <a {...props} className={className}>
+      <p {...props} className={className}>
         {children}
-      </a>
+      </p>
     </Link>
   );
 }

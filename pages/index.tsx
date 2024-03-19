@@ -27,12 +27,12 @@ const Home: NextPage = () => {
             </Button>
           </Link>
         </div>
-        <div className='relative flex h-[300px] w-[300px] xl:h-[450px] xl:w-[450px] mt-[100px] mx-auto sm:mr-0 lg:mr-12'>
+        <article className='relative flex h-[300px] w-[300px] xl:h-[450px] xl:w-[450px] mt-[100px] mx-auto sm:mr-0 lg:mr-12'>
           <div className='relative h-[200px] w-[250px] lg:h-[250px] lg:w-[300px] mx-auto'>
-            <Image src="/images/bcg-yellow.png" alt="bcg"  layout='fill' className="absolute" loading="eager"/>
+            <Image src="/images/bcg-yellow.png" alt="bcg"  layout='fill' className="absolute" priority/>
           </div>
-          <Image src="/images/chair-main.png" alt="chair"  layout='fill' className="absolute" loading="eager"/>
-        </div>
+          <Image src="/images/chair-main.png" alt="chair"  layout='fill' className="absolute" priority/>
+        </article>
       </section>
       <ProductsList/>
     </>

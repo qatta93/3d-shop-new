@@ -5,7 +5,6 @@ import { Formik } from "formik";
 export const RegisterForm = () => {
 
   return (
-    <>
       <Formik
         initialValues={{
           name: "",
@@ -122,6 +121,5 @@ export const RegisterForm = () => {
           </form>
         )}
       </Formik>
-    </>
   );
 };

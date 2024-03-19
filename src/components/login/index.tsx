@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Button from '../button';
 import Image from 'next/image';
 import { LoginForm } from './loginForm';
@@ -9,13 +9,14 @@ import { signIn } from "next-auth/react"
 
 const LoginModal = ({setShowLoginModal, csrfToken, externalProviders}) => {
   console.log(externalProviders)
+  
   return (
     <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] h-[655px] px-[45px] py-[20px]'>
       <h1>Login</h1>
       <p className='pb-10'>We are happy to have you with us!</p>
       {Object.values(externalProviders).map((provider:ProvidersProps) => (
-            <div key={provider.name}>
-              <button onClick={() => signIn(provider.id)} className='cursor-pointer'>
+            <article key={provider.name}>
+              <div onClick={() => signIn(provider.id)} className='cursor-pointer'>
                 {provider.name === 'Google' && 
                   <Button
                     variant={'secondary'}
@@ -38,8 +39,8 @@ const LoginModal = ({setShowLoginModal, csrfToken, externalProviders}) => {
                     Continue with Github
                   </Button>
                 }
-              </button>
-            </div>
+              </div>
+            </article>
           ))}
       <div className='w-full'>
         <p className="w-full border-b-[1px] border-primary leading-[2px] text-center my-6"><span className="bg-white px-2 text-primary">or</span></p>

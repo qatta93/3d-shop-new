@@ -20,13 +20,12 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
       <NavLink href={'/'}>home</NavLink>
       <NavLink href={'/products'}>products</NavLink>
       {session ?
-        <NavLink href={'/auth/signin'}><a onClick={() => signOut()}>logout</a></NavLink>
+        <NavLink href={'/auth/signin'} onClick={() => signOut()}>logout</NavLink>
         :
-        <NavLink href={'/auth/signin'}><a onClick={() => signIn()}>login</a></NavLink>
+        <NavLink href={'/auth/signin'} onClick={() => signIn()}>login</NavLink>
       }
       <NavLink href={'/cart'}>
         <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px]'>
-            <div>
              {(typeof window !== "undefined" && window.location.href.indexOf("cart") > -1) ?
               <Image src="/images/cart-filled.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               :
@@ -39,7 +38,6 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
               :
               ''
             }
-            </div>
         </div>
       </NavLink>
     </div>
