@@ -18,6 +18,7 @@ export const CreditCard = ({state}) => {
             alt="mastercard"
             width={60}
             height={40}
+            loading="eager"
           />
         </div>
         <div className="pt-4">

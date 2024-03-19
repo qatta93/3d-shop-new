@@ -8,7 +8,7 @@ export const Products = () => {
       <section className='px-[20px] pb-20 sm:px-[50px] lg:px-[160px] xl:px-[200px] pt-[130px] items-center text-center sm:text-left bg-white-bcg bg-no-repeat bg-cover bg-center'>
         <div className='flex flex-col sm:flex-row max-w-[1000px] mx-auto'>
           <div className='flex-1 max-w-[400px] hidden sm:block relative h-[275px] w-[300px] lg:h-[250px] lg:w-[300px] mx-0'>
-            <Image src="/images/chair-products.png" alt="chair-background"  layout='fill' className="absolute"/>
+            <Image src="/images/chair-products.png" alt="chair-background"  layout='fill' className="absolute" loading="eager"/>
           </div>
           <div className='flex-1 mx-auto sm:pl-8 xl:pl-0 max-w-[500px] lg:ml-12 xl:ml-20 '>
             <h1>Products</h1>
