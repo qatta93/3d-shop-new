@@ -1,3 +1,4 @@
+'use client'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
@@ -9,11 +10,20 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 
 
 export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
-  //@ts-ignore
-  const { state, dispatch } = useContext(Context);
+  // @ts-ignore
+  // const { state, dispatch } = useContext(Context);
 
-  const findQuantity = state.map(item => item.quantity);
-  const totalQuantity = findQuantity.reduce((partialSum, a) => partialSum + a, 0);
+  const [showFilledCartIcon, setShowFilledCartIcon] = useState(false)
+
+  // const findQuantity = state.map(item => item.quantity);
+  // const totalQuantity = findQuantity.reduce((partialSum, a) => partialSum + a, 0);
+
+  useEffect(() => {
+    if(((typeof window !== "undefined" && window.location.href.indexOf("cart") > -1))){
+      return setShowFilledCartIcon(false)
+    }
+    return setShowFilledCartIcon(true)
+  }, [])
 
   return (
     <div className='flex h-[35px]'>
@@ -26,18 +36,18 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
       }
       <NavLink href={'/cart'}>
         <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px]'>
-             {(typeof window !== "undefined" && window.location.href.indexOf("cart") > -1) ?
+             {showFilledCartIcon ?
               <Image src="/images/cart-filled.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               :
               <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               }
-              {totalQuantity > 0 ?
+              {/* {totalQuantity > 0 ?
               <div className="absolute -right-1 z-10 w-6 h-6 rounded-full inline-flex items-center justify-center bg-white  text-[14px] font-semibold border-solid border-[1px] border-grey-dark">
               {totalQuantity}
               </div>
               :
               ''
-            }
+            } */}
         </div>
       </NavLink>
     </div>

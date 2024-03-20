@@ -1,5 +1,6 @@
 .linkNav {
   margin: auto 16px;
+  cursor: pointer;
 }
 
 .linkNav:hover {

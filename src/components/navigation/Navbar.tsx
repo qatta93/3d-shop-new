@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Image from 'next/image';
 import Link from 'next/link'
@@ -12,6 +12,15 @@ export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
   const [deviceWidth] = useDeviceSize();
   const { data: session } = useSession();
 
+  const [showBackButton, setShowBackButton] = useState(false)
+
+    useEffect(() => {
+      if((typeof window !== "undefined" && window.location.pathname == '/')){
+        return setShowBackButton(false)
+      }
+      return setShowBackButton(true)
+    }, [])
+    
   return (
     <>
     <nav className='fixed z-10 h-[50px] sm:h-[70px] w-full flex justify-between bg-primary-light px-[20px] py-[12px] sm:py-[20px] sm:px-[40px] lg:px-[112px]'>
@@ -29,13 +38,11 @@ export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
         {deviceWidth > 600 ? <DesktopNav session={session} signIn={signIn} signOut={signOut}/> : <MobileNav openMenu={openMenu} setOpenMenu={setOpenMenu}/>}
       </section>
     </nav>
-    {(typeof window !== "undefined" && window.location.pathname == '/') ?
-    ''
-    :
+    { showBackButton &&
     <section className='absolute top-20 px-[20px] py-[4px] sm:py-[6px] sm:px-[40px] lg:px-[112px]'>
       <BackButton />
     </section>
-    }
+     }
     </>
   )
 }
