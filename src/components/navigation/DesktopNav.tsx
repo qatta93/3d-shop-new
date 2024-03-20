@@ -1,13 +1,11 @@
 'use client'
-import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { useContext } from 'react';
 import { Context } from "context/AppContext";
 import Image from 'next/image';
 import { DesktopNavProps } from '../types';
 import NavLink from './NavLink';
-import { signIn, signOut, useSession } from 'next-auth/react';
-
+import { useRouter } from "next/dist/client/router";
 
 export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
   // @ts-ignore
@@ -18,12 +16,14 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
   // const findQuantity = state.map(item => item.quantity);
   // const totalQuantity = findQuantity.reduce((partialSum, a) => partialSum + a, 0);
 
+  const router = useRouter();
+
   useEffect(() => {
-    if(((typeof window !== "undefined" && window.location.href.indexOf("cart") > -1))){
-      return setShowFilledCartIcon(false)
+    if(((typeof window !== "undefined" && router.asPath.indexOf("cart") > -1))){
+      return setShowFilledCartIcon(true)
     }
-    return setShowFilledCartIcon(true)
-  }, [])
+    return setShowFilledCartIcon(false)
+  }, [router.asPath])
 
   return (
     <div className='flex h-[35px]'>

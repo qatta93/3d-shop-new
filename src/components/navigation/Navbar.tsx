@@ -7,19 +7,23 @@ import { DesktopNav } from './DesktopNav';
 import useDeviceSize from '../hooks/useDeviceSize';
 import { MobileNavProps } from '../types';
 import { BackButton } from './backButton';
+import { useRouter } from "next/dist/client/router";
+
 
 export const Navbar = ({openMenu, setOpenMenu}:MobileNavProps) => {
   const [deviceWidth] = useDeviceSize();
   const { data: session } = useSession();
 
+  const router = useRouter();
+
   const [showBackButton, setShowBackButton] = useState(false)
 
     useEffect(() => {
-      if((typeof window !== "undefined" && window.location.pathname == '/')){
+      if((typeof window !== "undefined" && router.asPath == '/')){
         return setShowBackButton(false)
       }
       return setShowBackButton(true)
-    }, [])
+    }, [router.asPath])
     
   return (
     <>
