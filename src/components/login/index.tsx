@@ -6,8 +6,7 @@ import { ProvidersProps } from '../types';
 import { signIn } from "next-auth/react"
 
 
-
-const LoginModal = ({setShowLoginModal, csrfToken, externalProviders}) => {
+const LoginModal = ({setShowLoginModal, externalProviders}) => {
   
   return (
     <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] h-[655px] px-[45px] py-[20px]'>
@@ -15,7 +14,7 @@ const LoginModal = ({setShowLoginModal, csrfToken, externalProviders}) => {
       <p className='pb-10'>We are happy to have you with us!</p>
       {Object.values(externalProviders).map((provider:ProvidersProps) => (
             <article key={provider.name}>
-              <div onClick={() => signIn(provider.id)} className='cursor-pointer'>
+              <div className='cursor-pointer'>
                 {provider.name === 'Google' && 
                   <Button
                     variant={'secondary'}
