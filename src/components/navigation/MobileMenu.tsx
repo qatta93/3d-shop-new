@@ -3,7 +3,7 @@ import React from 'react'
 import Button from '../button'
 
 export const MobileMenu = ({setOpenMenu}) => {
-  // check the login route
+
   const pages = ['home', 'products', 'login', 'cart']
   return (
     <section className='flex items-center h-[calc(100vh-53px)] w-full bg-white'>

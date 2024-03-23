@@ -8,7 +8,6 @@ import { signIn } from "next-auth/react"
 
 
 const LoginModal = ({setShowLoginModal, csrfToken, externalProviders}) => {
-  console.log(externalProviders)
   
   return (
     <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] h-[655px] px-[45px] py-[20px]'>
@@ -45,7 +44,7 @@ const LoginModal = ({setShowLoginModal, csrfToken, externalProviders}) => {
       <div className='w-full'>
         <p className="w-full border-b-[1px] border-primary leading-[2px] text-center my-6"><span className="bg-white px-2 text-primary">or</span></p>
       </div>
-      <LoginForm csrfToken={csrfToken}/>
+      <LoginForm />
       <section className='text-center pt-10'>
         <p>Don&apos;t have an account?</p>
         <button className='font-bold' onClick={() => setShowLoginModal(((current:boolean) => !current))}>Register</button>

@@ -29,11 +29,13 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
     <div className='flex h-[35px]'>
       <NavLink href={'/'}>home</NavLink>
       <NavLink href={'/products'}>products</NavLink>
-      {session ?
+      {/* {session ?
         <NavLink href={'/auth/signin'} onClick={() => signOut()}>logout</NavLink>
         :
         <NavLink href={'/auth/signin'} onClick={() => signIn()}>login</NavLink>
-      }
+      } */}
+      
+      <NavLink href={'/login'}>login</NavLink>
       <NavLink href={'/cart'}>
         <div className='relative h-[28px] w-[33px] lg:h-[35px] lg:w-[40px]'>
              {showFilledCartIcon ?
