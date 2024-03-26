@@ -18,7 +18,7 @@ const Products: NextPage = () => {
 
   return (
     <section className='flex flex-col lg:flex-row min-h-[calc(100vh-50px)] bg-white mb-[3px]'>
-      <div className='px-[20px] pb-20 sm:px-[50px] lg:px-[80px] xl:px-[100px] pt-[130px]'>
+      <div className='px-[20px] pb-20 sm:px-[50px] lg:px-[80px] xl:px-[100px] pt-[70px] md:pt-[130px]'>
         <section className='flex-1 mx-auto sm:pl-8 xl:pl-0 max-w-[700px] lg:ml-12 xl:ml-20 '>
           <h1>{items}</h1>
           <p className='mt-4 text-[14px] xl:text-[18px] font-light text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

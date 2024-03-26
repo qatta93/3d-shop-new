@@ -14,9 +14,11 @@ export const ProductsCart = ({dummyLocalStorage}:any) => {
       <div className='flex flex-[65%] align-middle justify-center'>
         {state.length > 0 ? <ProductsCartModal/> : <EmptyCart/> }
       </div>
+      {state.length > 0 &&
       <div  className='flex flex-[35%] mx-auto lg:justify-end'>
         <PaymentModal/>
       </div>
+    }
     </article>
   )
 }

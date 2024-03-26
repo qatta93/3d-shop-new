@@ -8,14 +8,14 @@ import { ProductsList } from '@/components/ProductsList';
 
 const Home: NextPage = () => {
 
-  const { state } = useContext(Context);
-  console.log(state)
+  // const { state } = useContext(Context);
+  // console.log(state)
 
   return (
     <>
       <section className='flex flex-col sm:flex-row px-[20px] sm:px-[40px] lg:px-[112px] items-center text-center sm:text-left'>
         <div>
-          <h1 className='md:text-left'>Furniture for a better everyday life.</h1>
+          <h1 className='pt-4 sm:pt-0 md:text-left'>Furniture for a better everyday life.</h1>
           <p className='pt-[31px] pb-[45px] max-w-[300px] lg:max-w-[400px] lg:leading-[32px] text-base sm:text-[20px] lg:text-[24px] font-light'>Have a look on our 3D models and find your perfect match!</p>
           <Link href={'/products'}>
             <Button
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
             </Button>
           </Link>
         </div>
-        <article className='relative flex h-[300px] w-[300px] xl:h-[450px] xl:w-[450px] mt-[100px] mx-auto sm:mr-0 lg:mr-12'>
+        <article className='relative flex h-[300px] w-[300px] xl:h-[450px] xl:w-[450px] mt-[50px] sm:mt-[100px] mx-auto sm:mr-0 lg:mr-12'>
           <div className='relative h-[200px] w-[250px] lg:h-[250px] lg:w-[300px] mx-auto'>
             <Image src="/images/bcg-yellow.png" alt="bcg"  layout='fill' className="absolute" priority/>
           </div>

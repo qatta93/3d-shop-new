@@ -32,7 +32,7 @@ export const ItemCard = ({furniture}) => {
 }
 
   return (
-    <article className='w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
+    <article className='w-full max-w-[350px] mx-auto xl:mx-4 rounded-lg shadow-2xl mt-16'>
       {showEmbedModelPopup && <EmbedModelPopup furniture={furniture} setShowEmbedModelPopup={setShowEmbedModelPopup}/>}
       <div className='h-[270px] relative cursor-pointer' onClick={() => setShowEmbedModelPopup(true)}>
         {/* @ts-ignore */}
@@ -55,7 +55,7 @@ export const ItemCard = ({furniture}) => {
       <Button
         onClick={() => addToCart()}
         variant={'primary'}
-        className={'btn-xs rounded-none rounded-b-lg cursor-pointer'}
+        className={'btn-xs rounded-none rounded-b-lg cursor-pointer max-w-full'}
         name={'Add to cart'}
         startIcon={<Image src="/images/cart.png" alt="cart" height={20} width={25}/>}
       >
