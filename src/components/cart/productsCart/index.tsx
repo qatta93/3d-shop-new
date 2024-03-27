@@ -5,7 +5,7 @@ import { ProductsCartModal } from './productsCartModal'
 import { PaymentModal } from './productsCartModal/paymentModal'
 import { EmptyCart } from '../emptyCart';
 
-export const ProductsCart = ({dummyLocalStorage}:any) => {
+export const ProductsCart = () => {
     //@ts-ignore
     const { state, dispatch } = useContext(Context);
 

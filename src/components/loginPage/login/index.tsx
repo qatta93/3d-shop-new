@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react'
-import Button from '../button';
+import React, { useState } from 'react'
 import Image from 'next/image';
 import { LoginForm } from './loginForm';
-import { ProvidersProps } from '../types';
-import { signIn } from "next-auth/react"
+import { ProvidersProps } from '@/components/types';
+import Button from '@/components/button';
 
-
-const LoginModal = ({setShowLoginModal, externalProviders}) => {
+const LoginModal = ({externalProviders, setShowLoginModal}) => {
   
   return (
     <section className='flex flex-col justify-center items-center space-y-3 max-w-[450px] h-[655px] px-[45px] py-[20px]'>
@@ -48,7 +46,6 @@ const LoginModal = ({setShowLoginModal, externalProviders}) => {
         <p>Don&apos;t have an account?</p>
         <button className='font-bold' onClick={() => setShowLoginModal(((current:boolean) => !current))}>Register</button>
       </section>
-
     </section>
   )
 }

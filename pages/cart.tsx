@@ -1,11 +1,8 @@
 import { EmptyCart } from '@/components/cart/emptyCart';
 import { ProductsCart } from '@/components/cart/productsCart';
 
-
 import { NextPage } from 'next'
 import React from 'react'
-
-
 
 const Cart: NextPage = () => {
 

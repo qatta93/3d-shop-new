@@ -8,10 +8,10 @@ import { Context } from "context/AppContext";
 
 export const MobileNav = ({openMenu, setOpenMenu}:MobileNavProps) => {
     //@ts-ignore
-    // const { state, dispatch } = useContext(Context);
+    const { state, dispatch } = useContext(Context);
 
-    // const findQuantity = state && state.map(item => item.quantity);
-    // const totalQuantity = findQuantity && findQuantity.reduce((partialSum, a) => partialSum + a, 0);
+    const findQuantity = state && state.map(item => item.quantity);
+    const totalQuantity = findQuantity && findQuantity.reduce((partialSum, a) => partialSum + a, 0);    
 
     const [showFilledCartIcon, setShowFilledCartIcon] = useState(false)
   
@@ -32,10 +32,11 @@ export const MobileNav = ({openMenu, setOpenMenu}:MobileNavProps) => {
               :
               <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               } 
-              {/* {totalQuantity > 0 &&
+              {totalQuantity > 0 && 
               <p className="absolute -right-1 z-10 w-6 h-6 rounded-full inline-flex items-center justify-center bg-white  text-[14px] font-semibold border-solid border-[1px] border-grey-dark">
               {totalQuantity}
-              </p>} */}
+              </p>
+              }
             </>
         </div>
       </NavLink>

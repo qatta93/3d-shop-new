@@ -1,15 +1,10 @@
-import { useContext } from 'react';
 import Button from '@/components/button'
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import Image from 'next/image';
-import { Context } from "../context/AppContext"
 import { ProductsList } from '@/components/ProductsList';
 
 const Home: NextPage = () => {
-
-  // const { state } = useContext(Context);
-  // console.log(state)
 
   return (
     <>

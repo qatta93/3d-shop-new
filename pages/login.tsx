@@ -1,27 +1,7 @@
-import { useState } from "react";
-import LoginModal from '@/components/login';
 import Image from 'next/image';
-import RegisterModal from '@/components/register';
+import LoginPage from "@/components/loginPage";
 
 const SignIn = () => {
-  const [showLoginModal, setShowLoginModal] = useState(true)
-
-  const externalProviders = [
-    {
-      id: 'github',
-      name: 'GitHub',
-      type: 'oauth',
-      signinUrl: 'http://localhost:3000/api/auth/signin/github',
-      callbackUrl: 'http://localhost:3000/api/auth/callback/github'
-    },
-    {
-      id: 'google',
-      name: 'Google',
-      type: 'oauth',
-      signinUrl: 'http://localhost:3000/api/auth/signin/google',
-      callbackUrl: 'http://localhost:3000/api/auth/callback/google'
-    },
-  ]
 
   return (
     <section className='flex bg-white lg:flex-row flex-col-reverse '>
@@ -31,10 +11,10 @@ const SignIn = () => {
         </div>
       </div>
       <div className='flex flex-1 py-10 align-middle justify-center my-auto'>
-        {showLoginModal ? <LoginModal setShowLoginModal={setShowLoginModal} externalProviders={externalProviders}/> : <RegisterModal setShowLoginModal={setShowLoginModal}/>}
+       <LoginPage />
       </div>
     </section>
   )
 }
-
+ 
 export default SignIn;

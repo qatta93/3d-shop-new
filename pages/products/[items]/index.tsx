@@ -10,10 +10,6 @@ const Products: NextPage = () => {
   const router = useRouter();
   const { items } = router.query;
 
-  //    @ts-ignore
-  // const { state } = useContext(Context);
-  // console.log(state)
-
   const currentItems = itemsDetails.filter((item) => item.type === items)
 
   return (
