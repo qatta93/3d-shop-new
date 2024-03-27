@@ -9,12 +9,12 @@ import { useRouter } from "next/dist/client/router";
 
 export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
   // @ts-ignore
-  // const { state, dispatch } = useContext(Context);
+  const { state, dispatch } = useContext(Context);
 
   const [showFilledCartIcon, setShowFilledCartIcon] = useState(false)
 
-  // const findQuantity = state.map(item => item.quantity);
-  // const totalQuantity = findQuantity.reduce((partialSum, a) => partialSum + a, 0);
+  const findQuantity = state.map(item => item.quantity);
+  const totalQuantity = findQuantity.reduce((partialSum, a) => partialSum + a, 0);
 
   const router = useRouter();
 
@@ -43,13 +43,11 @@ export const DesktopNav = ({session, signIn, signOut}:DesktopNavProps) => {
               :
               <Image src="/images/cart.png" alt="cart" layout='fill' className="absolute ml-16px lg:ml-27px"/>
               }
-              {/* {totalQuantity > 0 ?
+              {totalQuantity > 0 &&
               <div className="absolute -right-1 z-10 w-6 h-6 rounded-full inline-flex items-center justify-center bg-white  text-[14px] font-semibold border-solid border-[1px] border-grey-dark">
               {totalQuantity}
               </div>
-              :
-              ''
-            } */}
+            }
         </div>
       </NavLink>
     </div>
