@@ -1,8 +1,8 @@
 import { getProviders, signIn, getSession , getCsrfToken } from "next-auth/react"
 import React, { useState } from 'react'
-import LoginModal from '@/components/login';
+import LoginModal from '@/components/loginPage/login';
 import Image from 'next/image';
-import RegisterModal from '@/components/register';
+import RegisterModal from '@/components/loginPage/register';
 
 const SignIn = ({ providers, csrfToken }) => {
   const [showLoginModal, setShowLoginModal] = useState(true)
